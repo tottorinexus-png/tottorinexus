@@ -70,15 +70,29 @@ a {
 
 .logo {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 
     text-decoration: none;
     line-height: 1.2;
 }
 
+.logo img {
+    width: 58px;
+    height: 58px;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
 .logo-main {
     color: var(--primary);
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 800;
     letter-spacing: 0.08em;
 }
@@ -880,5 +894,20 @@ a {
     .footer-inner {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .logo-main {
+        font-size: 16px;
+    }
+
+    .logo-sub {
+        font-size: 9px;
     }
 }
