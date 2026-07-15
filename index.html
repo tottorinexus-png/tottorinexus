@@ -3,375 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta
-        name="description"
-        content="鳥取ネクサスは、鳥取県の店舗・企業・個人事業主向けに、低価格でホームページ制作を行うWeb制作サービスです。"
-    >
-
+    <meta name="description" content="鳥取県の店舗・企業・個人事業主向けホームページ制作サービスです。">
     <title>鳥取ネクサス｜鳥取のホームページ制作</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
+<body data-page="home">
 
 <header class="header">
     <div class="header-inner">
-
-        <a href="#" class="logo">
-        <img src="images/logo.png" alt="鳥取ネクサス">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="鳥取ネクサス">
             <div class="logo-text">
                 <span class="logo-main">TOTTORI NEXUS</span>
                 <span class="logo-sub">鳥取のホームページ制作</span>
             </div>
         </a>
 
-        <button class="menu-button" id="menuButton" aria-label="メニューを開く">
-            <span></span>
-            <span></span>
-            <span></span>
+        <button class="menu-button" id="menuButton" type="button" aria-label="メニューを開く" aria-expanded="false">
+            <span></span><span></span><span></span>
         </button>
 
         <nav class="nav" id="nav">
             <ul>
-                <li><a href="#about">私たちについて</a></li>
-                <li><a href="#service">サービス</a></li>
-                <li><a href="#strength">選ばれる理由</a></li>
-                <li><a href="#price">料金</a></li>
-                <li><a href="#flow">制作の流れ</a></li>
-                <li><a href="#contact" class="nav-contact">お問い合わせ</a></li>
+                <li><a href="about.html" data-nav="about">運営者情報</a></li>
+                <li><a href="service.html" data-nav="service">サービス</a></li>
+                <li><a href="works.html" data-nav="works">制作実績</a></li>
+                <li><a href="price.html" data-nav="price">料金</a></li>
+                <li><a href="flow.html" data-nav="flow">制作の流れ</a></li>
+                <li><a href="contact.html" data-nav="contact" class="nav-contact">お問い合わせ</a></li>
             </ul>
         </nav>
-
     </div>
 </header>
 
+
 <main>
-
-    <section class="hero">
-        <div class="hero-overlay"></div>
-
-        <div class="hero-inner">
-            <p class="hero-label">TOTTORI WEB CREATIVE SERVICE</p>
-
-            <h1>
-                鳥取のお店に、<br>
-                伝わるホームページを。
-            </h1>
-
-            <p class="hero-text">
-                鳥取県の店舗・企業・個人事業主向けに、<br class="pc-only">
-                見やすく、分かりやすく、低価格なホームページを制作します。
-            </p>
-
-            <div class="hero-buttons">
-                <a href="#contact" class="button button-primary">
-                    無料で相談する
-                </a>
-
-                <a href="#service" class="button button-secondary">
-                    サービスを見る
-                </a>
-            </div>
-
-            <div class="hero-points">
-                <div>
-                    <strong>地域密着</strong>
-                    <span>鳥取県内に対応</span>
-                </div>
-
-                <div>
-                    <strong>低価格</strong>
-                    <span>小規模事業者向け</span>
-                </div>
-
-                <div>
-                    <strong>柔軟対応</strong>
-                    <span>相談しながら制作</span>
-                </div>
-            </div>
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+        <p class="hero-label">TOTTORI WEB CREATIVE SERVICE</p>
+        <h1>鳥取のお店に、<br>伝わるホームページを。</h1>
+        <p class="hero-text">鳥取県の店舗・企業・個人事業主向けに、<br class="pc-only">見やすく、分かりやすく、低価格なホームページを制作します。</p>
+        <div class="hero-buttons">
+            <a href="contact.html" class="button button-primary">無料で相談する</a>
+            <a href="service.html" class="button button-secondary">サービスを見る</a>
         </div>
-    </section>
-
-    <section id="about" class="section about">
-        <div class="section-inner">
-
-            <div class="section-heading">
-                <p class="section-en">ABOUT</p>
-                <h2>鳥取ネクサスについて</h2>
-            </div>
-
-            <div class="about-grid">
-                <div class="about-title">
-                    <p>
-                        地域の事業者と、<br>
-                        Webをつなぐ。
-                    </p>
-                </div>
-
-                <div class="about-text">
-                    <p>
-                        鳥取ネクサスは、鳥取県内の店舗・企業・個人事業主向けに、
-                        ホームページ制作を行うWeb制作サービスです。
-                    </p>
-
-                    <p>
-                        「ホームページを作りたいけれど、制作会社に依頼すると高い」
-                        「何を載せればよいか分からない」
-                        といった悩みに寄り添い、目的に合ったサイトを一緒に作ります。
-                    </p>
-
-                    <p>
-                        学生運営ならではの柔軟性と、AIを活用した効率的な制作により、
-                        費用を抑えながら、事業の魅力が伝わるWebサイトを提供します。
-                    </p>
-                </div>
-            </div>
-
+        <div class="hero-points">
+            <div><strong>地域密着</strong><span>鳥取県内に対応</span></div>
+            <div><strong>低価格</strong><span>小規模事業者向け</span></div>
+            <div><strong>柔軟対応</strong><span>相談しながら制作</span></div>
         </div>
-    </section>
-
-    <section id="service" class="section service">
-        <div class="section-inner">
-
-            <div class="section-heading">
-                <p class="section-en">SERVICE</p>
-                <h2>サービス内容</h2>
-                <p class="section-description">
-                    必要な内容を整理し、企画から公開までまとめて対応します。
-                </p>
-            </div>
-
-            <div class="card-grid">
-
-                <article class="service-card">
-                    <span class="card-number">01</span>
-                    <h3>ホームページ制作</h3>
-                    <p>
-                        店舗や事業の特徴を整理し、スマートフォンにも対応した
-                        見やすいホームページを制作します。
-                    </p>
-                </article>
-
-                <article class="service-card">
-                    <span class="card-number">02</span>
-                    <h3>既存サイトの改善</h3>
-                    <p>
-                        古くなったデザインや、見づらいページ構成を見直し、
-                        現在の事業内容に合ったサイトへ改善します。
-                    </p>
-                </article>
-
-                <article class="service-card">
-                    <span class="card-number">03</span>
-                    <h3>公開・運用サポート</h3>
-                    <p>
-                        サーバーやドメインの設定、公開後の文章修正や画像変更なども
-                        必要に応じて支援します。
-                    </p>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="strength" class="section strength">
-        <div class="section-inner">
-
-            <div class="section-heading">
-                <p class="section-en">STRENGTH</p>
-                <h2>鳥取ネクサスが選ばれる理由</h2>
-            </div>
-
-            <div class="strength-list">
-
-                <article class="strength-item">
-                    <div class="strength-number">01</div>
-                    <div>
-                        <h3>地域密着で相談しやすい</h3>
-                        <p>
-                            鳥取県内の事業者を中心に、事業内容や地域性を理解しながら制作します。
-                            専門用語を避け、分かりやすく説明します。
-                        </p>
-                    </div>
-                </article>
-
-                <article class="strength-item">
-                    <div class="strength-number">02</div>
-                    <div>
-                        <h3>費用を抑えた制作</h3>
-                        <p>
-                            小規模な運営とAIの活用によって制作工程を効率化し、
-                            一般的な制作会社より依頼しやすい価格を目指します。
-                        </p>
-                    </div>
-                </article>
-
-                <article class="strength-item">
-                    <div class="strength-number">03</div>
-                    <div>
-                        <h3>公開後も修正できる</h3>
-                        <p>
-                            営業時間、料金、写真、文章など、事業の変化に合わせた更新にも対応します。
-                            作って終わりではなく、継続して使えるサイトを目指します。
-                        </p>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="price" class="section price">
-        <div class="section-inner">
-
-            <div class="section-heading">
-                <p class="section-en">PRICE</p>
-                <h2>料金の目安</h2>
-                <p class="section-description">
-                    内容やページ数に応じて、事前に見積もりを提示します。
-                </p>
-            </div>
-
-            <div class="price-grid">
-
-                <article class="price-card">
-                    <p class="price-plan">ライトプラン</p>
-                    <p class="price-value">
-                        <span>30,000</span>円〜
-                    </p>
-                    <p class="price-note">小規模な店舗・個人事業向け</p>
-
-                    <ul>
-                        <li>1ページ構成</li>
-                        <li>スマートフォン対応</li>
-                        <li>基本的なSEO設定</li>
-                        <li>お問い合わせ導線</li>
-                    </ul>
-                </article>
-
-                <article class="price-card recommended">
-                    <p class="recommended-label">おすすめ</p>
-                    <p class="price-plan">スタンダードプラン</p>
-                    <p class="price-value">
-                        <span>60,000</span>円〜
-                    </p>
-                    <p class="price-note">情報をしっかり掲載したい事業者向け</p>
-
-                    <ul>
-                        <li>複数ページ対応</li>
-                        <li>スマートフォン対応</li>
-                        <li>基本的なSEO設定</li>
-                        <li>画像・文章の構成支援</li>
-                    </ul>
-                </article>
-
-                <article class="price-card">
-                    <p class="price-plan">更新サポート</p>
-                    <p class="price-value">
-                        <span>3,000</span>円〜
-                    </p>
-                    <p class="price-note">公開後の修正・更新向け</p>
-
-                    <ul>
-                        <li>文章修正</li>
-                        <li>画像差し替え</li>
-                        <li>営業時間・料金変更</li>
-                        <li>軽微なレイアウト調整</li>
-                    </ul>
-                </article>
-
-            </div>
-
-            <p class="price-caution">
-                ※料金は仮の目安です。正式な価格は、サービス内容と制作実績を踏まえて調整してください。
-            </p>
-
-        </div>
-    </section>
-
-    <section id="flow" class="section flow">
-        <div class="section-inner">
-
-            <div class="section-heading">
-                <p class="section-en">FLOW</p>
-                <h2>制作の流れ</h2>
-            </div>
-
-            <div class="flow-grid">
-
-                <article class="flow-item">
-                    <span>01</span>
-                    <h3>お問い合わせ</h3>
-                    <p>制作目的や現在の悩みを確認します。</p>
-                </article>
-
-                <article class="flow-item">
-                    <span>02</span>
-                    <h3>ヒアリング</h3>
-                    <p>掲載内容、デザイン、必要な機能を整理します。</p>
-                </article>
-
-                <article class="flow-item">
-                    <span>03</span>
-                    <h3>制作・確認</h3>
-                    <p>サイトを制作し、内容を確認していただきます。</p>
-                </article>
-
-                <article class="flow-item">
-                    <span>04</span>
-                    <h3>公開</h3>
-                    <p>修正後、インターネット上へ公開します。</p>
-                </article>
-
-            </div>
-
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-    <div class="contact-inner">
-
-        <p class="section-en contact-en">CONTACT</p>
-
-        <h2>
-            ホームページ制作について、<br>
-            まずはご相談ください。
-        </h2>
-
-        <p>
-            制作内容や費用が決まっていない段階でも問題ありません。<br>
-            現在の悩みや、作りたいサイトのイメージをお聞かせください。
-        </p>
-
-        <a
-            href="mailto:info.tottorinexus@gmail.com?subject=ホームページ制作についての問い合わせ&body=お名前：%0A事業者名：%0A相談内容："
-            class="button button-contact"
-        >
-            メールで問い合わせる
-        </a>
-
     </div>
 </section>
 
+<section class="section">
+    <div class="section-inner">
+        <div class="section-heading">
+            <p class="section-en">ABOUT</p>
+            <h2>地域の事業者と、Webをつなぐ。</h2>
+            <p class="section-description">学生運営とAI活用による効率的な制作で、事業の魅力が伝わるサイトを提供します。</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-title"><p>相談しやすく、<br>分かりやすい制作を。</p></div>
+            <div class="about-text">
+                <p>鳥取ネクサスは、鳥取県内の店舗・企業・個人事業主向けにホームページ制作を行うWeb制作サービスです。</p>
+                <p>何を載せればよいか分からない段階から、目的・掲載内容・デザインを一緒に整理します。</p>
+                <a href="about.html" class="button button-outline">運営者情報を見る</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section alt">
+    <div class="section-inner">
+        <div class="section-heading">
+            <p class="section-en">SERVICE</p>
+            <h2>サービス内容</h2>
+        </div>
+        <div class="card-grid">
+            <article class="card service-card"><span class="card-number">01</span><h3>ホームページ制作</h3><p>スマートフォン対応の見やすいホームページを制作します。</p></article>
+            <article class="card service-card"><span class="card-number">02</span><h3>既存サイトの改善</h3><p>古くなったデザインや構成を、現在の事業内容に合わせて改善します。</p></article>
+            <article class="card service-card"><span class="card-number">03</span><h3>公開・運用支援</h3><p>公開設定や、公開後の文章・画像変更にも対応します。</p></article>
+        </div>
+        <div style="text-align:center;margin-top:38px"><a href="service.html" class="button button-blue">詳しく見る</a></div>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="cta-inner">
+        <h2>ホームページ制作について、<br>まずはご相談ください。</h2>
+        <p>内容や費用が決まっていない段階でも問題ありません。</p>
+        <a href="contact.html" class="button">お問い合わせへ</a>
+    </div>
+</section>
 </main>
+
 
 <footer class="footer">
     <div class="footer-inner">
-
         <div>
             <p class="footer-logo">TOTTORI NEXUS</p>
             <p>鳥取県の店舗・企業向けホームページ制作</p>
+            <div class="footer-links">
+                <a href="about.html">運営者情報</a>
+                <a href="service.html">サービス</a>
+                <a href="works.html">制作実績</a>
+                <a href="price.html">料金</a>
+                <a href="flow.html">制作の流れ</a>
+                <a href="contact.html">お問い合わせ</a>
+                <a href="privacy.html">プライバシーポリシー</a>
+            </div>
         </div>
-
-        <p class="copyright">
-            © 2026 TOTTORI NEXUS
-        </p>
-
+        <p>© 2026 TOTTORI NEXUS</p>
     </div>
 </footer>
-
 <script src="script.js"></script>
 
 </body>
