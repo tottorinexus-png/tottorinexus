@@ -539,3 +539,104 @@ button, a { -webkit-tap-highlight-color: transparent; }
     .contact-panel { padding: 32px 22px; }
     .footer-inner { grid-template-columns: 1fr; align-items: start; }
 }
+
+/* 料金ページ追加スタイル */
+.price-regular {
+    margin-top: 22px;
+    color: var(--subtext);
+    font-size: 14px;
+}
+
+.price-regular s {
+    margin-left: 6px;
+}
+
+.support-box {
+    margin-top: 64px;
+    padding: 42px;
+    display: grid;
+    grid-template-columns: 1.3fr auto;
+    gap: 28px 48px;
+    align-items: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(16, 24, 40, 0.06);
+}
+
+.support-box h2 {
+    color: var(--primary-dark);
+    font-size: 30px;
+}
+
+.support-box > div > p:last-child {
+    margin-top: 10px;
+    color: var(--subtext);
+}
+
+.support-price {
+    text-align: right;
+}
+
+.support-price span {
+    display: block;
+    color: var(--subtext);
+    font-size: 13px;
+}
+
+.support-price strong {
+    color: var(--primary);
+    font-size: 30px;
+}
+
+.support-box ul {
+    grid-column: 1 / -1;
+    padding-top: 26px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    border-top: 1px solid var(--border);
+    list-style: none;
+}
+
+.support-box li {
+    position: relative;
+    padding-left: 22px;
+    font-size: 14px;
+}
+
+.support-box li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 800;
+}
+
+@media (max-width: 900px) {
+    .support-box {
+        grid-template-columns: 1fr;
+    }
+
+    .support-price {
+        text-align: left;
+    }
+
+    .support-box ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .support-box {
+        padding: 30px 22px;
+    }
+
+    .support-box ul {
+        grid-template-columns: 1fr;
+    }
+
+    .support-price strong {
+        font-size: 26px;
+    }
+}
