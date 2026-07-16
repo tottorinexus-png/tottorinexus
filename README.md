@@ -7,6 +7,7 @@
 - works.html
 - price.html
 - flow.html
+- faq.html
 - contact.html
 - privacy.html
 - style.css

@@ -61,3 +61,22 @@ if ("IntersectionObserver" in window) {
 } else {
     animationTargets.forEach(target => target.classList.add("is-visible"));
 }
+
+// FAQアコーディオン
+document.querySelectorAll(".faq-question").forEach((question) => {
+    question.addEventListener("click", () => {
+        const answer = question.nextElementSibling;
+        const isOpen = question.getAttribute("aria-expanded") === "true";
+
+        document.querySelectorAll(".faq-question").forEach((otherQuestion) => {
+            const otherAnswer = otherQuestion.nextElementSibling;
+            otherQuestion.setAttribute("aria-expanded", "false");
+            if (otherAnswer) otherAnswer.style.maxHeight = null;
+        });
+
+        if (!isOpen && answer) {
+            question.setAttribute("aria-expanded", "true");
+            answer.style.maxHeight = `${answer.scrollHeight}px`;
+        }
+    });
+});
