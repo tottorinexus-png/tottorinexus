@@ -8,6 +8,8 @@
 - price.html
 - flow.html
 - faq.html
+- area.html
+- why.html
 - contact.html
 - privacy.html
 - style.css
