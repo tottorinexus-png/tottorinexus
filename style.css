@@ -1967,3 +1967,539 @@ body.page-ready .page-hero-inner {
     font-weight: 900;
     letter-spacing: .14em;
 }
+
+
+/* =========================================
+   サービス比較
+========================================= */
+
+.comparison-table-wrap {
+    overflow-x: auto;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 14px 45px rgba(16, 24, 40, .08);
+}
+
+.comparison-table {
+    width: 100%;
+    min-width: 820px;
+    border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 24px 22px;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+    text-align: left;
+}
+
+.comparison-table th:last-child,
+.comparison-table td:last-child {
+    border-right: 0;
+}
+
+.comparison-table tbody tr:last-child th,
+.comparison-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.comparison-table thead th {
+    color: var(--primary-dark);
+    background: #f8fafc;
+    font-size: 14px;
+}
+
+.comparison-table thead th:first-child {
+    width: 22%;
+}
+
+.comparison-table tbody th {
+    color: var(--primary-dark);
+    background: #f8fafc;
+    font-size: 14px;
+}
+
+.comparison-table td {
+    color: var(--subtext);
+}
+
+.comparison-table td strong {
+    display: block;
+    color: var(--text);
+    font-size: 15px;
+}
+
+.comparison-table td span {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.comparison-table .comparison-highlight {
+    background:
+        linear-gradient(135deg, rgba(7, 87, 166, .075), rgba(14, 165, 233, .035)),
+        #fff;
+    border-left: 2px solid rgba(7, 87, 166, .18);
+    border-right: 2px solid rgba(7, 87, 166, .18);
+}
+
+.comparison-table thead .comparison-highlight {
+    color: var(--white);
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+}
+
+.comparison-table td.comparison-highlight strong {
+    color: var(--primary-dark);
+}
+
+.comparison-brand {
+    margin-bottom: 5px;
+    display: block;
+    color: #7dd3fc;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .15em;
+}
+
+.comparison-caution {
+    margin-top: 20px;
+    color: var(--subtext);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.comparison-message {
+    margin-top: 46px;
+    padding: 50px;
+    color: var(--white);
+    background:
+        radial-gradient(circle at 85% 20%, rgba(14, 165, 233, .35), transparent 32%),
+        linear-gradient(135deg, #041b34, #0757a6);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+}
+
+.comparison-message .section-en {
+    color: #7dd3fc;
+}
+
+.comparison-message h2 {
+    font-size: clamp(30px, 4.4vw, 48px);
+    line-height: 1.45;
+}
+
+.comparison-message > p:not(.section-en) {
+    max-width: 760px;
+    margin-top: 20px;
+    opacity: .85;
+}
+
+.comparison-message .button {
+    margin-top: 30px;
+}
+
+.recommend-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.recommend-card {
+    padding: 32px 28px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 10px 34px rgba(16, 24, 40, .055);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.recommend-card:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--shadow);
+}
+
+.recommend-number {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .14em;
+}
+
+.recommend-card h3 {
+    margin-top: 16px;
+    color: var(--primary-dark);
+    font-size: 21px;
+    line-height: 1.55;
+}
+
+.recommend-card p {
+    margin-top: 12px;
+    color: var(--subtext);
+    font-size: 14px;
+}
+
+.comparison-guide {
+    padding: 76px 0;
+    background: var(--background);
+}
+
+.comparison-guide-inner {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.comparison-guide h2 {
+    color: var(--primary-dark);
+    font-size: clamp(28px, 4vw, 42px);
+}
+
+.comparison-guide p:not(.section-en) {
+    max-width: 680px;
+    margin-top: 12px;
+    color: var(--subtext);
+}
+
+.comparison-guide-buttons {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 12px;
+}
+
+@media (max-width: 900px) {
+    .recommend-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .comparison-guide-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .comparison-message {
+        padding: 34px 22px;
+    }
+
+    .recommend-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-guide-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .comparison-guide-buttons .button {
+        width: 100%;
+    }
+}
+
+
+
+/* =========================================
+   買い切り・月額費用比較
+========================================= */
+.cost-hero {
+    display: grid;
+    grid-template-columns: 1fr 90px 1fr;
+    gap: 22px;
+    align-items: stretch;
+}
+
+.cost-plan {
+    padding: 38px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: 0 14px 42px rgba(16, 24, 40, .07);
+}
+
+.cost-plan-nexus {
+    color: #fff;
+    background: linear-gradient(135deg, #041b34, #0757a6);
+    border-color: transparent;
+}
+
+.cost-label {
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .12em;
+}
+
+.cost-plan-nexus .cost-label { color: #7dd3fc; }
+.cost-plan-subscription .cost-label { color: var(--subtext); }
+
+.cost-plan h3 {
+    margin-top: 12px;
+    font-size: clamp(25px, 3vw, 34px);
+}
+
+.cost-plan-subscription h3 { color: var(--primary-dark); }
+
+.cost-price {
+    margin-top: 22px;
+    font-weight: 800;
+}
+
+.cost-price strong {
+    font-size: clamp(42px, 5vw, 64px);
+    line-height: 1;
+}
+
+.cost-plan-nexus .cost-price strong { color: #fff; }
+.cost-plan-subscription .cost-price strong { color: #667085; }
+
+.cost-plan ul {
+    margin-top: 26px;
+    display: grid;
+    gap: 11px;
+    list-style: none;
+}
+
+.cost-plan li {
+    position: relative;
+    padding-left: 24px;
+    font-size: 14px;
+}
+
+.cost-plan li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: 900;
+}
+
+.cost-plan-nexus li::before { color: #7dd3fc; }
+.cost-plan-subscription li::before { color: #98a2b3; }
+.cost-plan-subscription li { color: var(--subtext); }
+
+.cost-vs {
+    display: grid;
+    place-items: center;
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.cost-saving {
+    margin: 30px auto 0;
+    max-width: 760px;
+    padding: 28px;
+    text-align: center;
+    background: #eaf6ff;
+    border: 1px solid #b8ddf8;
+    border-radius: 18px;
+}
+
+.cost-saving span {
+    display: block;
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.cost-saving strong {
+    display: block;
+    margin-top: 4px;
+    color: var(--primary-dark);
+    font-size: clamp(38px, 6vw, 62px);
+}
+
+.cost-saving p {
+    margin-top: 8px;
+    color: var(--subtext);
+}
+
+.cost-chart-card {
+    margin-top: 54px;
+    padding: 40px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: 0 14px 45px rgba(16, 24, 40, .07);
+}
+
+.cost-chart-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.cost-chart-heading h2 {
+    color: var(--primary-dark);
+    font-size: clamp(28px, 4vw, 42px);
+}
+
+.cost-chart-heading > p {
+    color: var(--subtext);
+    font-size: 12px;
+}
+
+.cost-chart { margin-top: 36px; }
+
+.cost-chart-legend {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    color: var(--subtext);
+    font-size: 12px;
+}
+
+.cost-chart-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cost-chart-legend i {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.legend-nexus { background: var(--primary); }
+.legend-subscription { background: #cbd5e1; }
+
+.cost-chart-grid {
+    height: 370px;
+    margin-top: 22px;
+    padding: 30px 24px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: end;
+    background: repeating-linear-gradient(to top, #edf1f5 0 1px, transparent 1px 25%);
+    border-bottom: 2px solid #cbd5e1;
+}
+
+.cost-chart-group {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.cost-bars {
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 14px;
+}
+
+.cost-bar {
+    position: relative;
+    width: min(72px, 30%);
+    height: var(--bar-height);
+    min-height: 60px;
+    border-radius: 10px 10px 0 0;
+    transition: transform .25s ease;
+}
+
+.cost-bar:hover { transform: translateY(-5px); }
+.bar-nexus { background: linear-gradient(180deg, var(--accent), var(--primary)); }
+.bar-subscription { background: linear-gradient(180deg, #e2e8f0, #94a3b8); }
+
+.cost-bar span {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    white-space: nowrap;
+    transform: translateX(-50%);
+    color: var(--text);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.cost-chart-group > p {
+    padding: 14px 0;
+    color: var(--primary-dark);
+    font-weight: 800;
+}
+
+.ownership-message {
+    margin-top: 50px;
+    padding: 48px;
+    color: #fff;
+    background: linear-gradient(135deg, #041b34, #0757a6);
+    border-radius: 22px;
+}
+
+.ownership-message .section-en { color: #7dd3fc; }
+.ownership-message h2 { font-size: clamp(30px, 4vw, 46px); line-height: 1.45; }
+.ownership-message > p:not(.section-en) { max-width: 800px; margin-top: 18px; opacity: .86; }
+
+.ownership-points {
+    margin-top: 28px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ownership-points span {
+    padding: 9px 15px;
+    background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.local-value-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.local-value-card {
+    padding: 32px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 10px 34px rgba(16, 24, 40, .055);
+}
+
+.local-value-card > span {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .14em;
+}
+
+.local-value-card h3 {
+    margin-top: 14px;
+    color: var(--primary-dark);
+    font-size: 22px;
+}
+
+.local-value-card p {
+    margin-top: 12px;
+    color: var(--subtext);
+}
+
+@media (max-width: 800px) {
+    .cost-hero { grid-template-columns: 1fr; }
+    .cost-vs { min-height: 45px; }
+    .local-value-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+    .cost-plan, .cost-chart-card, .ownership-message { padding: 28px 20px; }
+    .cost-chart-heading { align-items: flex-start; flex-direction: column; }
+    .cost-chart-grid { height: 330px; padding-inline: 8px; gap: 8px; }
+    .cost-bars { height: 260px; gap: 5px; }
+    .cost-bar { width: 42%; }
+    .cost-bar span { font-size: 9px; }
+    .cost-chart-legend { justify-content: flex-start; flex-wrap: wrap; }
+}
