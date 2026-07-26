@@ -83,3 +83,50 @@ document.querySelectorAll(".faq-question").forEach((question) => {
 
 // 選択式お問い合わせフォーム
 const consultationForm=document.getElementById("consultationForm");if(consultationForm){consultationForm.addEventListener("submit",e=>{e.preventDefault();if(!consultationForm.reportValidity())return;const d=new FormData(consultationForm),f=d.getAll("features");const name=String(d.get("customerName")||"").trim(),business=String(d.get("businessName")||"").trim(),email=String(d.get("email")||"").trim(),message=String(d.get("message")||"").trim();const body=["鳥取ネクサス ご担当者様","","ホームページ制作について相談します。","","【お名前】",name,"","【店舗名・事業者名】",business||"未入力","","【メールアドレス】",email,"","【現在ホームページを持っていますか？】",d.get("websiteStatus"),"","【今回の相談内容】",d.get("consultationType"),"","【希望するページ数】",d.get("pageCount"),"","【写真・文章の準備状況】",d.get("materials"),"","【希望する機能】",f.length?f.join("、"):"選択なし","","【希望納期】",d.get("deadline"),"","【予算】",d.get("budget"),"","【その他の相談内容】",message||"特になし"].join("\n");location.href=`mailto:info.tottorinexus@gmail.com?subject=${encodeURIComponent(`ホームページ制作のご相談（${name}様）`)}&body=${encodeURIComponent(body)}`})}
+
+
+/* Opening animation */
+const opening = document.getElementById("opening");
+const openingSessionKey = "tottoriNexusOpeningShown";
+
+const revealPage = () => {
+    window.requestAnimationFrame(() => {
+        document.body.classList.add("page-ready");
+    });
+};
+
+if (opening) {
+    const hasShownOpening = sessionStorage.getItem(openingSessionKey) === "true";
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (hasShownOpening || prefersReducedMotion) {
+        opening.remove();
+        revealPage();
+    } else {
+        document.body.classList.add("is-opening");
+        let hasClosed = false;
+
+        const closeOpening = () => {
+            if (hasClosed) return;
+            hasClosed = true;
+            opening.classList.add("is-leaving");
+
+            window.setTimeout(() => {
+                opening.classList.add("is-hidden");
+                document.body.classList.remove("is-opening");
+                sessionStorage.setItem(openingSessionKey, "true");
+                revealPage();
+            }, 850);
+
+            window.setTimeout(() => opening.remove(), 1400);
+        };
+
+        window.addEventListener("load", () => {
+            window.setTimeout(closeOpening, 1500);
+        }, { once: true });
+
+        window.setTimeout(closeOpening, 3500);
+    }
+} else {
+    revealPage();
+}

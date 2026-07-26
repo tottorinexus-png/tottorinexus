@@ -1084,3 +1084,211 @@ button, a { -webkit-tap-highlight-color: transparent; }
         grid-template-columns: 1fr;
     }
 }
+
+
+/* Opening and motion system */
+body.is-opening {
+    overflow: hidden;
+}
+
+.opening {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: #063d78;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .45s ease, visibility .45s ease;
+}
+
+.opening.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.opening-panel {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 51%;
+    background:
+        radial-gradient(circle at 75% 30%, rgba(14, 165, 233, .28), transparent 38%),
+        linear-gradient(135deg, #031b35, #0757a6);
+    transition: transform .85s cubic-bezier(.76, 0, .24, 1);
+}
+
+.opening-panel-top { top: 0; }
+.opening-panel-bottom { bottom: 0; }
+.opening.is-leaving .opening-panel-top { transform: translateY(-105%); }
+.opening.is-leaving .opening-panel-bottom { transform: translateY(105%); }
+
+.opening-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    transition: opacity .35s ease, transform .55s ease;
+}
+
+.opening-bg-letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    color: rgba(255, 255, 255, .045);
+    font-size: clamp(260px, 45vw, 720px);
+    font-weight: 900;
+    line-height: 1;
+    transform: translate(-50%, -50%);
+    user-select: none;
+}
+
+.opening-logo {
+    width: clamp(110px, 16vw, 180px);
+    height: clamp(110px, 16vw, 180px);
+    object-fit: cover;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(.76) rotate(-5deg);
+    animation: openingLogo .8s cubic-bezier(.22, 1, .36, 1) .12s forwards;
+}
+
+.opening-name {
+    margin-top: 24px;
+    font-size: clamp(22px, 4vw, 38px);
+    font-weight: 800;
+    letter-spacing: .18em;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: openingText .65s ease .48s forwards;
+}
+
+.opening-subtitle {
+    margin-top: 8px;
+    font-size: clamp(11px, 1.5vw, 15px);
+    font-weight: 600;
+    letter-spacing: .16em;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: openingText .65s ease .68s forwards;
+}
+
+.opening-line {
+    width: 0;
+    height: 1px;
+    margin-top: 24px;
+    background: rgba(255, 255, 255, .75);
+    animation: openingLine .7s ease .85s forwards;
+}
+
+.opening.is-leaving .opening-content {
+    opacity: 0;
+    transform: scale(1.06);
+}
+
+@keyframes openingLogo {
+    0% { opacity: 0; transform: scale(.76) rotate(-5deg); }
+    70% { opacity: 1; transform: scale(1.04) rotate(0); }
+    100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+@keyframes openingText {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes openingLine {
+    from { width: 0; opacity: 0; }
+    to { width: 110px; opacity: 1; }
+}
+
+/* First-view entrance after opening */
+.hero-inner,
+.page-hero-inner {
+    opacity: 0;
+    transform: translateY(24px);
+}
+
+body.page-ready .hero-inner,
+body.page-ready .page-hero-inner {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .9s ease, transform .9s cubic-bezier(.22, 1, .36, 1);
+}
+
+/* Refined hover motion */
+.card,
+.work-card,
+.price-card,
+.why-card,
+.aftercare-card,
+.contact-method-card {
+    transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+.card:hover,
+.work-card:hover,
+.price-card:hover,
+.why-card:hover,
+.aftercare-card:hover,
+.contact-method-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 46px rgba(16, 24, 40, .12);
+}
+
+.button {
+    overflow: hidden;
+    position: relative;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, .14);
+    transform: translateX(-105%) skewX(-18deg);
+    transition: transform .45s ease;
+}
+
+.button:hover::before {
+    transform: translateX(105%) skewX(-18deg);
+}
+
+@media (max-width: 600px) {
+    .opening-logo { width: 120px; height: 120px; }
+    .opening-name { font-size: 23px; letter-spacing: .12em; }
+    .opening-subtitle { font-size: 11px; }
+    .opening-bg-letter { font-size: 330px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .opening-logo,
+    .opening-name,
+    .opening-subtitle,
+    .opening-line {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+    .opening-panel,
+    .opening-content,
+    .hero-inner,
+    .page-hero-inner,
+    .card,
+    .work-card,
+    .price-card,
+    .why-card,
+    .aftercare-card,
+    .contact-method-card,
+    .button::before {
+        transition-duration: .01ms !important;
+    }
+}
