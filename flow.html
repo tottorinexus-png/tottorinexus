@@ -3,101 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="お問い合わせから公開までの制作の流れです。">
+    <meta name="description" content="鳥取ネクサスのホームページ制作の流れです。お問い合わせから公開後のサポートまでをご案内します。">
     <title>制作の流れ｜鳥取ネクサス</title>
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .flow-intro{max-width:760px;margin:0 auto 56px;color:var(--subtext);text-align:center}
+        .flow-timeline{position:relative;max-width:980px;margin:0 auto;display:grid;gap:28px}
+        .flow-timeline::before{content:"";position:absolute;top:48px;bottom:48px;left:50%;width:2px;background:linear-gradient(to bottom,var(--accent),var(--primary));transform:translateX(-50%)}
+        .flow-step{position:relative;display:grid;grid-template-columns:1fr 110px 1fr;align-items:center;min-height:170px}
+        .flow-step:nth-child(odd) .flow-card{grid-column:1;text-align:right}
+        .flow-step:nth-child(even) .flow-card{grid-column:3;text-align:left}
+        .flow-marker{grid-column:2;grid-row:1;z-index:2;width:72px;height:72px;margin:0 auto;display:grid;place-items:center;color:var(--white);background:linear-gradient(135deg,var(--primary-dark),var(--accent));border:7px solid var(--background);border-radius:50%;box-shadow:0 10px 30px rgba(7,87,166,.22);font-size:28px}
+        .flow-card{padding:28px 30px;background:var(--white);border:1px solid var(--border);border-radius:18px;box-shadow:0 10px 35px rgba(16,24,40,.06);transition:transform .25s ease,box-shadow .25s ease}
+        .flow-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+        .flow-number{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:.14em}
+        .flow-card h2{margin-top:8px;color:var(--primary-dark);font-size:24px}
+        .flow-card p{margin-top:12px;color:var(--subtext)}
+        .flow-role{margin-top:18px;padding-top:18px;display:grid;gap:10px;border-top:1px solid var(--border)}
+        .flow-role p{margin:0;font-size:13px}.flow-role strong{color:var(--primary-dark)}
+        .flow-notes{max-width:980px;margin:60px auto 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+        .flow-note-card{padding:30px;background:var(--white);border:1px solid var(--border);border-radius:16px}
+        .flow-note-card h3{color:var(--primary-dark);font-size:21px}
+        .flow-note-card p,.flow-note-card ul{margin-top:14px;color:var(--subtext)}
+        .flow-note-card ul{padding-left:1.3em}.flow-note-card li+li{margin-top:8px}
+        @media(max-width:800px){.flow-timeline::before{left:36px}.flow-step{grid-template-columns:72px 1fr;min-height:auto}.flow-step:nth-child(odd) .flow-card,.flow-step:nth-child(even) .flow-card{grid-column:2;grid-row:1;text-align:left}.flow-marker{grid-column:1;grid-row:1;width:58px;height:58px;border-width:5px;font-size:22px}.flow-notes{grid-template-columns:1fr}}
+        @media(max-width:600px){.flow-intro{text-align:left}.flow-card{padding:24px 20px}.flow-card h2{font-size:21px}}
+    </style>
 </head>
 <body data-page="flow">
-<!-- Opening animation -->
-<div class="opening" id="opening" aria-hidden="true">
-    <div class="opening-panel opening-panel-top"></div>
-    <div class="opening-panel opening-panel-bottom"></div>
-    <div class="opening-content">
-        <div class="opening-bg-letter">N</div>
-        <img src="images/logo.png" alt="" class="opening-logo">
-        <p class="opening-name">TOTTORI NEXUS</p>
-        <p class="opening-subtitle">鳥取のホームページ制作</p>
-        <div class="opening-line"></div>
-    </div>
-</div>
-
-
-<header class="header">
-    <div class="header-inner">
-        <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="鳥取ネクサス">
-            <div class="logo-text">
-                <span class="logo-main">TOTTORI NEXUS</span>
-                <span class="logo-sub">鳥取のホームページ制作</span>
-            </div>
-        </a>
-
-        <button class="menu-button" id="menuButton" type="button" aria-label="メニューを開く" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
-
-        <nav class="nav" id="nav">
-            <ul>
-                <li><a href="about.html" data-nav="about">運営者情報</a></li>
-                <li><a href="service.html" data-nav="service">サービス</a></li>
-                <li><a href="why.html" data-nav="why">選ばれる理由</a></li>
-                <li><a href="works.html" data-nav="works">制作実績</a></li>
-                <li><a href="price.html" data-nav="price">料金</a></li>
-                <li><a href="faq.html" data-nav="faq">よくある質問</a></li>
-                <li><a href="contact.html" data-nav="contact" class="nav-contact">お問い合わせ</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-
+<header class="header"><div class="header-inner"><a href="index.html" class="logo"><img src="images/logo.png" alt="鳥取ネクサス"><div class="logo-text"><span class="logo-main">TOTTORI NEXUS</span><span class="logo-sub">鳥取のホームページ制作</span></div></a><button class="menu-button" id="menuButton" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav" id="nav"><ul><li><a href="about.html" data-nav="about">運営者情報</a></li><li><a href="service.html" data-nav="service">サービス</a></li><li><a href="why.html" data-nav="why">選ばれる理由</a></li><li><a href="works.html" data-nav="works">制作実績</a></li><li><a href="price.html" data-nav="price">料金</a></li><li><a href="faq.html" data-nav="faq">よくある質問</a></li><li><a href="contact.html" data-nav="contact" class="nav-contact">お問い合わせ</a></li></ul></nav></div></header>
 <main>
-<section class="page-hero">
-    <div class="page-hero-inner">
-        <p class="eyebrow">FLOW</p>
-        <h1>制作の流れ</h1>
-        <p>お問い合わせから公開まで、確認しながら段階的に進めます。</p>
-    </div>
-</section>
-<section class="section">
-    <div class="section-inner">
-        <div class="flow-grid">
-            <article class="flow-item"><span>STEP 01</span><h3>お問い合わせ</h3><p>現在の課題や制作目的を伺います。</p></article>
-            <article class="flow-item"><span>STEP 02</span><h3>ヒアリング</h3><p>掲載内容、デザイン、必要な機能を整理します。</p></article>
-            <article class="flow-item"><span>STEP 03</span><h3>見積もり</h3><p>制作内容、料金、納期の目安をご案内します。</p></article>
-            <article class="flow-item"><span>STEP 04</span><h3>制作</h3><p>確認用ページを作成し、内容をご確認いただきます。</p></article>
-            <article class="flow-item"><span>STEP 05</span><h3>修正</h3><p>文章、画像、デザインなどを調整します。</p></article>
-            <article class="flow-item"><span>STEP 06</span><h3>公開</h3><p>最終確認後、インターネット上へ公開します。</p></article>
-            <article class="flow-item"><span>STEP 07</span><h3>運用</h3><p>必要に応じて公開後の更新を支援します。</p></article>
-        </div>
-    </div>
-</section>
+<section class="page-hero"><div class="page-hero-inner"><p class="eyebrow">FLOW</p><h1>制作の流れ</h1><p>お問い合わせから公開後のサポートまで、内容を確認しながら段階的に進めます。</p></div></section>
+<section class="section alt"><div class="section-inner"><div class="section-heading"><p class="section-en">PRODUCTION PROCESS</p><h2>ご相談から公開まで</h2></div><p class="flow-intro">ホームページ制作が初めての方にも分かりやすいよう、各段階で確認事項と次の作業をご案内します。</p>
+<div class="flow-timeline">
+<article class="flow-step"><div class="flow-card"><p class="flow-number">STEP 01</p><h2>お問い合わせ</h2><p>お問い合わせフォーム、メール、InstagramのDMからご相談ください。内容が決まっていない段階でも問題ありません。</p><div class="flow-role"><p><strong>お客様：</strong>現在のお悩みやご希望を伝える</p><p><strong>鳥取ネクサス：</strong>相談内容を確認し、次の流れをご案内</p></div></div><div class="flow-marker">✉</div></article>
+<article class="flow-step"><div class="flow-card"><p class="flow-number">STEP 02</p><h2>ヒアリング</h2><p>事業内容、ホームページの目的、掲載したい情報、デザインのイメージなどを詳しく確認します。</p><div class="flow-role"><p><strong>お客様：</strong>事業内容・要望・参考サイトを共有</p><p><strong>鳥取ネクサス：</strong>ページ構成・必要機能を整理</p></div></div><div class="flow-marker">⌕</div></article>
+<article class="flow-step"><div class="flow-card"><p class="flow-number">STEP 03</p><h2>お見積り・ご提案</h2><p>ヒアリング内容をもとに、制作プラン、ページ数、必要な機能、料金、納期の目安をご提示します。</p><div class="flow-role"><p><strong>お客様：</strong>提案内容と見積りを確認</p><p><strong>鳥取ネクサス：</strong>制作内容・料金・納期をご説明</p></div></div><div class="flow-marker">¥</div></article>
+<article class="flow-step"><div class="flow-card"><p class="flow-number">STEP 04</p><h2>ご契約・制作内容の確定</h2><p>内容にご納得いただいた後、ご契約となります。制作前にページ構成、文章、画像、デザイン方針を確認します。</p><div class="flow-role"><p><strong>お客様：</strong>制作内容を確認し承認</p><p><strong>鳥取ネクサス：</strong>契約内容と制作範囲を確定</p></div></div><div class="flow-marker">✓</div></article>
+<article class="flow-step"><div class="flow-card"><p class="flow-number">STEP 05</p><h2>デザイン・サイト制作</h2><p>確定した内容をもとに、パソコン・スマートフォンに対応したホームページを制作します。</p><div class="flow-role"><p><strong>お客様：</strong>必要な文章・写真などを提供</p><p><strong>鳥取ネクサス：</strong>デザイン・コーディングを実施</p></div></div><div class="flow-marker">⌘</div></article>
+<article class="flow-step"><div class="flow-card"><p class="flow-number">STEP 06</p><h2>ご確認</h2><p>確認用ページをご覧いただき、事前に確定した内容と相違がないかをご確認いただきます。</p><div class="flow-role"><p><strong>お客様：</strong>文章・画像・表示内容を確認</p><p><strong>鳥取ネクサス：</strong>制作ミスや表示不具合を修正</p></div></div><div class="flow-marker">◉</div></article>
+<article class="flow-step"><div class="flow-card"><p class="flow-number">STEP 07</p><h2>公開</h2><p>最終確認後、独自ドメインや指定の公開環境へサイトを公開します。公開後に表示と動作を確認します。</p><div class="flow-role"><p><strong>お客様：</strong>最終公開を承認</p><p><strong>鳥取ネクサス：</strong>公開設定・最終動作確認</p></div></div><div class="flow-marker">↗</div></article>
+<article class="flow-step"><div class="flow-card"><p class="flow-number">STEP 08</p><h2>更新サポート</h2><p>公開後の文章変更、写真差し替え、営業時間・料金変更、お知らせ投稿などにも対応します。</p><div class="flow-role"><p><strong>お客様：</strong>変更したい内容を送付</p><p><strong>鳥取ネクサス：</strong>契約内容に応じて更新作業を実施</p></div></div><div class="flow-marker">↻</div></article>
+</div>
+<div class="flow-notes"><section class="flow-note-card"><h3>制作期間の目安</h3><ul><li>ライトプラン：約1〜2週間</li><li>スタンダードプラン：約2〜4週間</li><li>プレミアムプラン：約1〜2か月</li></ul><p>素材の準備状況や制作内容によって前後する場合があります。</p></section><section class="flow-note-card"><h3>制作開始後の変更について</h3><p>制作前に確認・承認いただいた内容から、お客様都合で仕様やデザインを変更する場合は別途お見積りとなります。</p><p>当方の制作ミス、確認済み仕様との相違、表示不具合については無償で対応します。</p></section></div>
+</div></section>
+<section class="cta"><div class="cta-inner"><h2>ホームページ制作が初めてでも、<br>一つずつご案内します。</h2><p>内容が決まっていない段階からご相談いただけます。</p><a href="contact.html" class="button">無料で相談する</a></div></section>
 </main>
-
-
-<footer class="footer">
-    <div class="footer-inner">
-        <div>
-            <p class="footer-logo">TOTTORI NEXUS</p>
-            <p>鳥取県の店舗・企業向けホームページ制作</p>
-            <div class="footer-links">
-                <a href="about.html">運営者情報</a>
-                <a href="service.html">サービス</a>
-                <a href="why.html">選ばれる理由</a>
-                <a href="works.html">制作実績</a>
-                <a href="price.html">料金</a>
-                <a href="flow.html">制作の流れ</a>
-                <a href="area.html">対応エリア</a>
-                <a href="faq.html">よくある質問</a>
-                <a href="contact.html">お問い合わせ</a>
-                <a href="privacy.html">プライバシーポリシー</a>
-            </div>
-        </div>
-        <a href="https://www.instagram.com/tottori.nexus/" target="_blank" rel="noopener noreferrer" class="footer-instagram">Instagram：@tottori.nexus</a><p>© 2026 TOTTORI NEXUS</p>
-    </div>
-</footer>
+<footer class="footer"><div class="footer-inner"><div><p class="footer-logo">TOTTORI NEXUS</p><p>鳥取県の店舗・企業向けホームページ制作</p><div class="footer-links"><a href="about.html">運営者情報</a><a href="service.html">サービス</a><a href="why.html">選ばれる理由</a><a href="works.html">制作実績</a><a href="price.html">料金</a><a href="flow.html">制作の流れ</a><a href="area.html">対応エリア</a><a href="faq.html">よくある質問</a><a href="contact.html">お問い合わせ</a><a href="privacy.html">プライバシーポリシー</a></div><a href="https://www.instagram.com/tottori.nexus/" target="_blank" rel="noopener noreferrer" class="footer-instagram">Instagram：@tottori.nexus</a></div><p>© 2026 TOTTORI NEXUS</p></div></footer>
 <script src="script.js"></script>
-
 </body>
 </html>
