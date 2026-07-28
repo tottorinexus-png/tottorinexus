@@ -2549,7 +2549,7 @@ body.page-ready .page-hero-inner {
 .clean-bar-track { height: 54px; overflow: hidden; background: #edf2f7; border-radius: 12px; }
 .clean-bar { height: 100%; min-width: 130px; padding: 0 16px; display:flex; align-items:center; justify-content:flex-end; border-radius: 12px; }
 .clean-bar em { color:#fff; font-style:normal; font-size:13px; font-weight:900; }
-.clean-bar-nexus { width: 23%; background: linear-gradient(90deg,#0757a6,#0ea5e9); }
+.clean-bar-nexus { width: 34%; background: linear-gradient(90deg,#0757a6,#0ea5e9); }
 .clean-bar-subscription { width: 100%; background: linear-gradient(90deg,#667085,#344054); }
 .clean-saving { padding: 28px; color:#fff; background: linear-gradient(135deg,#043d77,#0757a6); border-radius: 18px; }
 .clean-saving span { font-size:12px; opacity:.78; }
