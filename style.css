@@ -3814,3 +3814,312 @@ body.page-ready .page-hero-inner {
         margin-left: 0;
     }
 }
+
+
+/* Instagram profile link page */
+.links-page {
+    min-height: 100vh;
+    color: #172033;
+    background:
+        radial-gradient(circle at 10% 0%, rgba(14, 165, 233, .16), transparent 34%),
+        radial-gradient(circle at 90% 100%, rgba(7, 87, 166, .16), transparent 32%),
+        linear-gradient(145deg, #eef5fb 0%, #f8fbfe 48%, #eaf2f9 100%);
+}
+
+.links-page::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(7, 87, 166, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(7, 87, 166, .035) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(to bottom, #000, transparent 80%);
+}
+
+.links-shell {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 660px);
+    margin: 0 auto;
+    padding: 42px 18px 28px;
+}
+
+.links-profile {
+    padding: 34px 28px 30px;
+    border: 1px solid rgba(255, 255, 255, .82);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, .92);
+    box-shadow: 0 28px 80px rgba(18, 45, 76, .14);
+    backdrop-filter: blur(18px);
+}
+
+.links-logo {
+    width: 92px;
+    height: 92px;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: 5px solid #fff;
+    border-radius: 26px;
+    background: #fff;
+    box-shadow: 0 14px 34px rgba(7, 87, 166, .18);
+}
+
+.links-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.links-eyebrow {
+    margin-top: 22px;
+    color: #0757a6;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .2em;
+    text-align: center;
+}
+
+.links-profile h1 {
+    margin-top: 7px;
+    color: #041b34;
+    font-size: clamp(30px, 7vw, 42px);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.links-name {
+    margin-top: 6px;
+    color: #52657a;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.links-bio {
+    margin: 22px auto 0;
+    color: #405167;
+    font-size: 14px;
+    font-weight: 650;
+    line-height: 1.95;
+    text-align: center;
+}
+
+.links-primary-actions {
+    margin-top: 28px;
+    display: grid;
+    gap: 12px;
+}
+
+.links-button {
+    min-height: 72px;
+    padding: 12px 16px;
+    display: grid;
+    grid-template-columns: 44px 1fr auto;
+    align-items: center;
+    gap: 13px;
+    border-radius: 18px;
+    font-size: 15px;
+    font-weight: 900;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.links-button:hover {
+    transform: translateY(-3px);
+}
+
+.links-button small {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 10px;
+    font-weight: 750;
+    opacity: .76;
+}
+
+.links-button b {
+    font-size: 19px;
+}
+
+.links-button-line {
+    color: #fff;
+    background: linear-gradient(135deg, #05ad49, #06c755);
+    box-shadow: 0 14px 30px rgba(6, 199, 85, .23);
+}
+
+.links-button-line:hover {
+    color: #fff;
+    box-shadow: 0 18px 35px rgba(6, 199, 85, .30);
+}
+
+.links-button-contact {
+    color: #fff;
+    background: linear-gradient(135deg, #043d77, #0b7fd1);
+    box-shadow: 0 14px 30px rgba(7, 87, 166, .22);
+}
+
+.links-button-contact:hover {
+    color: #fff;
+    box-shadow: 0 18px 35px rgba(7, 87, 166, .30);
+}
+
+.links-button-icon,
+.links-button-symbol {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .18);
+    font-size: 10px;
+    font-weight: 1000;
+}
+
+.links-button-symbol {
+    font-size: 20px;
+}
+
+.links-menu {
+    margin-top: 20px;
+    display: grid;
+    gap: 10px;
+}
+
+.links-menu-item {
+    min-height: 66px;
+    padding: 10px 16px;
+    display: grid;
+    grid-template-columns: 34px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    color: #172033;
+    border: 1px solid #dde8f2;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 8px 22px rgba(20, 42, 67, .05);
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.links-menu-item:hover {
+    color: #0757a6;
+    border-color: rgba(7, 87, 166, .30);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 27px rgba(20, 42, 67, .09);
+}
+
+.links-menu-number {
+    color: #9aabba;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .08em;
+}
+
+.links-menu-item > span:nth-child(2) {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.links-menu-item small {
+    display: block;
+    margin-bottom: 1px;
+    color: #7b8c9e;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.links-menu-item b {
+    color: #0757a6;
+    font-size: 17px;
+}
+
+.links-price-note {
+    margin-top: 22px;
+    padding: 23px 20px;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    border-radius: 19px;
+    background:
+        radial-gradient(circle at 90% 10%, rgba(255,255,255,.16), transparent 26%),
+        linear-gradient(145deg, #041b34, #0757a6 65%, #0b7fd1);
+    text-align: center;
+}
+
+.links-price-note p {
+    color: #75ddff;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .2em;
+}
+
+.links-price-note strong {
+    display: block;
+    margin-top: 5px;
+    font-size: 25px;
+}
+
+.links-price-note span {
+    display: block;
+    margin-top: 7px;
+    color: rgba(255,255,255,.78);
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+.links-social {
+    margin-top: 23px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 18px;
+}
+
+.links-social a {
+    color: #52657a;
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.links-social a:hover {
+    color: #0757a6;
+}
+
+.links-footer {
+    padding: 22px 0 0;
+    color: #72849a;
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-align: center;
+}
+
+@media (max-width: 560px) {
+    .links-shell {
+        padding: 20px 12px;
+    }
+
+    .links-profile {
+        padding: 28px 16px 24px;
+        border-radius: 24px;
+    }
+
+    .links-logo {
+        width: 82px;
+        height: 82px;
+        border-radius: 23px;
+    }
+
+    .links-bio {
+        font-size: 13px;
+    }
+
+    .links-button {
+        padding: 11px 13px;
+    }
+
+    .links-menu-item {
+        padding: 9px 13px;
+    }
+}
