@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="鳥取ネクサスで制作したホームページの表示・動作に関する障害、不具合の受付フォームです。">
+<meta name="robots" content="noindex,follow">
+<title>障害・不具合受付フォーム｜鳥取ネクサス</title>
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="trouble-report">
+<header class="header"><div class="header-inner"><a href="index.html" class="logo"><img src="images/logo.png" alt="鳥取ネクサス"><div class="logo-text"><span class="logo-main">TOTTORI NEXUS</span><span class="logo-sub">鳥取のホームページ制作</span></div></a><button class="menu-button" id="menuButton" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav" id="nav">
+<ul>
+<li><a href="service.html" data-nav="service">サービス</a></li>
+<li><a href="works.html" data-nav="works">制作実績</a></li>
+<li><a href="price.html" data-nav="price">料金</a></li>
+<li><a href="faq.html" data-nav="faq">よくある質問</a></li>
+<li><a href="contact.html" data-nav="contact" class="nav-contact">お問い合わせ</a></li>
+<li class="nav-about"><a href="about.html" data-nav="about">運営者情報</a></li>
+</ul>
+</nav></div></header>
+<main>
+<section class="page-hero support-page-hero trouble-page-hero">
+<div class="page-hero-inner">
+<p class="eyebrow">TROUBLE REPORT</p>
+<h1>障害・不具合受付フォーム</h1>
+<p>サイトが表示されない、表示が崩れる、ボタンが動かないなどの不具合をご報告ください。</p>
+</div>
+</section>
+
+<section class="section alt support-form-section">
+<div class="section-inner">
+<div class="security-alert">
+<div><p class="section-en">IMPORTANT</p><h2>認証情報は送らないでください</h2></div>
+<p>パスワード、秘密鍵、サーバー認証情報、クレジットカード情報などはフォームやメールに記載しないでください。</p>
+</div>
+
+<div class="support-notice-grid">
+<article class="support-notice-card">
+<p class="section-en">FREE SUPPORT</p>
+<h2>当方原因の不具合は無償対応</h2>
+<p>制作ミス、確認済み仕様との相違、当方が作成した部分の表示・動作不具合は無償で確認・修正します。</p>
+</article>
+<article class="support-notice-card support-notice-red">
+<p class="section-en">URGENT</p>
+<h2>サイト全体が表示されない場合</h2>
+<p>フォーム送信後、公式LINEでも「障害受付済み」とご連絡いただくと確認が早くなります。</p>
+<a href="line://ti/p/@722ogapk" target="_blank" rel="noopener noreferrer" class="button button-line">公式LINEを開く</a>
+</article>
+</div>
+
+<div class="support-layout">
+<section class="support-form-card">
+<div class="section-heading support-heading">
+<p class="section-en">FORM</p>
+<h2>不具合の状況を入力</h2>
+<p class="section-description">発生状況を詳しくご記入いただくと、原因確認がスムーズになります。</p>
+</div>
+
+<form id="troubleReportForm" class="support-form">
+<div class="form-row">
+<div class="form-group"><label for="customerName" class="form-label">お名前<span class="required-mark">必須</span></label><input id="customerName" name="customerName" type="text" class="form-control" autocomplete="name" required></div>
+<div class="form-group"><label for="businessName" class="form-label">店舗名・会社名<span class="required-mark">必須</span></label><input id="businessName" name="businessName" type="text" class="form-control" autocomplete="organization" required></div>
+</div>
+
+<div class="form-row">
+<div class="form-group"><label for="email" class="form-label">メールアドレス<span class="required-mark">必須</span></label><input id="email" name="email" type="email" class="form-control" autocomplete="email" required></div>
+<div class="form-group"><label for="phone" class="form-label">電話番号<span class="optional-mark">任意</span></label><input id="phone" name="phone" type="tel" class="form-control" autocomplete="tel" inputmode="tel"></div>
+</div>
+
+<div class="form-group"><label for="siteUrl" class="form-label">対象サイトのURL<span class="required-mark">必須</span></label><input id="siteUrl" name="siteUrl" type="url" class="form-control" placeholder="https://example.com/" required></div>
+
+<div class="form-row">
+<div class="form-group">
+<label for="troubleType" class="form-label">不具合の種類<span class="required-mark">必須</span></label>
+<select id="troubleType" name="troubleType" class="form-control" required>
+<option value="">選択してください</option>
+<option value="サイト全体が表示されない">サイト全体が表示されない</option>
+<option value="一部のページが表示されない">一部のページが表示されない</option>
+<option value="レイアウト・文字・画像が崩れている">レイアウト・文字・画像が崩れている</option>
+<option value="ボタン・リンクが動かない">ボタン・リンクが動かない</option>
+<option value="お問い合わせフォームが動かない">お問い合わせフォームが動かない</option>
+<option value="SSL・安全ではないという警告が出る">SSL・安全ではないという警告が出る</option>
+<option value="表示が極端に遅い">表示が極端に遅い</option>
+<option value="その他">その他</option>
+</select>
+</div>
+<div class="form-group">
+<label for="severity" class="form-label">影響度<span class="required-mark">必須</span></label>
+<select id="severity" name="severity" class="form-control" required>
+<option value="">選択してください</option>
+<option value="緊急：サイト全体が利用できない">緊急：サイト全体が利用できない</option>
+<option value="高：主要なページ・機能が利用できない">高：主要なページ・機能が利用できない</option>
+<option value="中：一部に問題があるが利用できる">中：一部に問題があるが利用できる</option>
+<option value="低：見た目や軽微な問題">低：見た目や軽微な問題</option>
+</select>
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-group"><label for="occurredAt" class="form-label">発生日時<span class="optional-mark">任意</span></label><input id="occurredAt" name="occurredAt" type="datetime-local" class="form-control"></div>
+<div class="form-group">
+<label for="frequency" class="form-label">発生頻度<span class="required-mark">必須</span></label>
+<select id="frequency" name="frequency" class="form-control" required>
+<option value="">選択してください</option>
+<option value="毎回発生する">毎回発生する</option>
+<option value="時々発生する">時々発生する</option>
+<option value="一度だけ発生した">一度だけ発生した</option>
+<option value="現在は確認できない">現在は確認できない</option>
+</select>
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label for="device" class="form-label">使用端末<span class="required-mark">必須</span></label>
+<select id="device" name="device" class="form-control" required>
+<option value="">選択してください</option>
+<option value="iPhone">iPhone</option>
+<option value="Androidスマートフォン">Androidスマートフォン</option>
+<option value="Windowsパソコン">Windowsパソコン</option>
+<option value="Mac">Mac</option>
+<option value="iPad・タブレット">iPad・タブレット</option>
+<option value="複数端末">複数端末</option>
+<option value="不明">不明</option>
+</select>
+</div>
+<div class="form-group">
+<label for="browser" class="form-label">使用ブラウザ<span class="required-mark">必須</span></label>
+<select id="browser" name="browser" class="form-control" required>
+<option value="">選択してください</option>
+<option value="Safari">Safari</option>
+<option value="Google Chrome">Google Chrome</option>
+<option value="Microsoft Edge">Microsoft Edge</option>
+<option value="Firefox">Firefox</option>
+<option value="Instagram・LINE内ブラウザ">Instagram・LINE内ブラウザ</option>
+<option value="不明">不明</option>
+</select>
+</div>
+</div>
+
+<div class="form-group"><label for="affectedPage" class="form-label">問題が起きているページ<span class="required-mark">必須</span></label><input id="affectedPage" name="affectedPage" type="text" class="form-control" placeholder="ページ名またはURLをご記入ください。" required></div>
+
+<div class="form-group"><label for="symptom" class="form-label">症状・表示内容<span class="required-mark">必須</span></label><textarea id="symptom" name="symptom" class="form-control" placeholder="何をしようとしたとき、どのような表示や動作になったかをご記入ください。" required></textarea></div>
+
+<div class="form-group"><label for="steps" class="form-label">発生までの操作手順<span class="optional-mark">任意</span></label><textarea id="steps" name="steps" class="form-control support-textarea-small" placeholder="例：トップページを開く → 料金を押す → 404と表示される"></textarea></div>
+
+<div class="form-group"><label for="errorMessage" class="form-label">エラーメッセージ<span class="optional-mark">任意</span></label><textarea id="errorMessage" name="errorMessage" class="form-control support-textarea-small" placeholder="表示された文章やエラー番号を、そのままご記入ください。"></textarea></div>
+
+<div class="support-file-note support-file-note-red"><strong>スクリーンショットの添付をお願いします</strong><p>メール作成後、開いたメールアプリで不具合画面の画像を添付してください。</p></div>
+
+<div class="form-group"><label for="recentChanges" class="form-label">直前に行った変更<span class="optional-mark">任意</span></label><textarea id="recentChanges" name="recentChanges" class="form-control support-textarea-small" placeholder="文章変更、画像差し替え、ドメイン設定変更などがあればご記入ください。"></textarea></div>
+
+<div class="form-consent"><label><input type="checkbox" id="privacyConsent" required><span><a href="privacy.html">プライバシーポリシー</a>を確認し、個人情報の取扱いに同意します。</span></label></div>
+
+<div class="support-submit-grid">
+<button type="submit" class="button button-blue form-submit">障害報告メールを作成</button>
+<button type="button" id="copyTroubleReport" class="button button-outline form-submit">入力内容をコピー</button>
+</div>
+<p id="copyStatus" class="form-note" aria-live="polite">スクリーンショットを添付し、内容を確認してから送信してください。</p>
+</form>
+</section>
+
+<aside class="support-side">
+<article class="support-side-card">
+<p class="section-en">UPDATE REQUEST</p>
+<h2>通常の更新依頼ですか？</h2>
+<p>文章・写真・営業時間・料金などの変更は、更新依頼フォームからお送りください。</p>
+<a href="update-request.html" class="button button-outline">更新を依頼する</a>
+</article>
+<article class="support-side-card support-side-warning">
+<p class="section-en">CHECK FIRST</p>
+<h2>まずお試しください</h2>
+<ul class="support-check-list compact">
+<li>ページを再読み込みする</li>
+<li>別のブラウザで確認する</li>
+<li>Wi-Fiとモバイル通信を切り替える</li>
+<li>数分待ってから再度確認する</li>
+</ul>
+</article>
+</aside>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer"><div class="footer-inner"><div><p class="footer-logo">TOTTORI NEXUS</p><p>鳥取県の店舗・企業向けホームページ制作</p><div class="footer-links">
+<a href="service.html">サービス</a><a href="works.html">制作実績</a><a href="price.html">料金</a><a href="faq.html">よくある質問</a><a href="contact.html">お問い合わせ</a><a href="update-request.html">更新依頼</a><a href="trouble-report.html">障害・不具合受付</a><a href="about.html">運営者情報</a><a href="why.html">選ばれる理由</a><a href="compare.html">料金比較</a><a href="flow.html">制作の流れ</a><a href="area.html">対応エリア</a><a href="privacy.html">プライバシーポリシー</a>
+</div><a href="https://www.instagram.com/tottori.nexus/" target="_blank" rel="noopener noreferrer" class="footer-instagram">Instagram：@tottori.nexus</a><a href="line://ti/p/@722ogapk" target="_blank" rel="noopener noreferrer" class="footer-line">公式LINE：友だち追加</a></div><p>© 2026 TOTTORI NEXUS</p></div></footer>
+<script src="script.js"></script>
+<script>
+const troubleForm=document.getElementById("troubleReportForm");
+const copyTroubleButton=document.getElementById("copyTroubleReport");
+const troubleCopyStatus=document.getElementById("copyStatus");
+function buildTroubleMail(){
+const data=new FormData(troubleForm);
+const value=(name)=>String(data.get(name)||"").trim();
+const body=[
+"鳥取ネクサス ご担当者様","","ホームページの障害・不具合を報告します。","",
+"【お名前】",value("customerName"),"",
+"【店舗名・会社名】",value("businessName"),"",
+"【メールアドレス】",value("email"),"",
+"【電話番号】",value("phone")||"未入力","",
+"【対象サイトURL】",value("siteUrl"),"",
+"【不具合の種類】",value("troubleType"),"",
+"【影響度】",value("severity"),"",
+"【発生日時】",value("occurredAt")||"不明","",
+"【発生頻度】",value("frequency"),"",
+"【使用端末】",value("device"),"",
+"【使用ブラウザ】",value("browser"),"",
+"【問題が起きているページ】",value("affectedPage"),"",
+"【症状・表示内容】",value("symptom"),"",
+"【発生までの操作手順】",value("steps")||"未入力","",
+"【エラーメッセージ】",value("errorMessage")||"未入力","",
+"【直前に行った変更】",value("recentChanges")||"未入力","",
+"※不具合画面のスクリーンショットを、このメールに添付します。",
+"※パスワード、秘密鍵、認証情報は記載していません。"
+].join("\n");
+return {subject:`【障害受付】${value("businessName")}／${value("troubleType")}`,body};
+}
+troubleForm.addEventListener("submit",(event)=>{
+event.preventDefault();
+if(!troubleForm.reportValidity())return;
+const mail=buildTroubleMail();
+window.location.href=`mailto:info.tottorinexus@gmail.com?subject=${encodeURIComponent(mail.subject)}&body=${encodeURIComponent(mail.body)}`;
+});
+copyTroubleButton.addEventListener("click",async()=>{
+if(!troubleForm.reportValidity())return;
+const mail=buildTroubleMail();
+const text=`件名：${mail.subject}\n\n${mail.body}`;
+try{await navigator.clipboard.writeText(text);}
+catch(error){const area=document.createElement("textarea");area.value=text;document.body.appendChild(area);area.select();document.execCommand("copy");area.remove();}
+troubleCopyStatus.textContent="入力内容をコピーしました。";
+});
+</script>
+<a href="line://ti/p/@722ogapk" target="_blank" rel="noopener noreferrer" class="floating-line" aria-label="鳥取ネクサス公式LINEを友だち追加"><span class="floating-line-icon" aria-hidden="true">LINE</span><span class="floating-line-text">LINEで相談</span></a>
+</body>
+</html>
