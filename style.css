@@ -1000,6 +1000,19 @@ button, a { -webkit-tap-highlight-color: transparent; }
     font-size: 14px;
 }
 
+
+.aftercare-savings {
+    width: fit-content;
+    margin-top: 14px;
+    padding: 8px 12px;
+    color: #0757a6;
+    background: #e8f5ff;
+    border: 1px solid #b9def7;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 900;
+}
+
 .aftercare-card ul {
     margin-top: 24px;
     padding-top: 22px;
