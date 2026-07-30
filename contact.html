@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="鳥取ネクサスへのホームページ制作相談フォームです。お名前・業種・希望プランなどを入力して簡単にご相談いただけます。">
-    <title>お問い合わせ｜鳥取ネクサス</title>
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <link rel="stylesheet" href="style.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="鳥取ネクサスへのホームページ制作相談フォームです。お名前・業種・希望プランなどを入力して簡単にご相談いただけます。" name="description"/>
+<title>お問い合わせ｜鳥取ネクサス</title>
+<link href="images/logo.png" rel="icon" type="image/png"/>
+<link href="style.css" rel="stylesheet"/>
+<style>
         .contact-layout{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.65fr);gap:34px;align-items:start}
         .contact-form-card,.contact-method-card{background:var(--white);border:1px solid var(--border);border-radius:18px;box-shadow:0 10px 35px rgba(16,24,40,.06)}
         .contact-form-card{padding:42px}.contact-heading{margin-bottom:34px;text-align:left}.contact-form{display:grid;gap:26px}
@@ -38,71 +39,65 @@
     </style>
 </head>
 <body data-page="contact">
-<header class="header"><div class="header-inner"><a href="index.html" class="logo"><img src="images/logo.png" alt="鳥取ネクサス"><div class="logo-text"><span class="logo-main">TOTTORI NEXUS</span><span class="logo-sub">鳥取のホームページ制作</span></div></a><button class="menu-button" id="menuButton" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav" id="nav">
-            <ul>
-                <li><a href="service.html" data-nav="service">サービス</a></li>
-                <li><a href="works.html" data-nav="works">制作実績</a></li>
-                <li><a href="price.html" data-nav="price">料金</a></li>
-                <li><a href="faq.html" data-nav="faq">よくある質問</a></li>
-                <li><a href="contact.html" data-nav="contact" class="nav-contact">お問い合わせ</a></li>
-                <li class="nav-about"><a href="about.html" data-nav="about">運営者情報</a></li>
-            </ul>
-        </nav></div></header>
+<header class="header"><div class="header-inner"><a class="logo" href="index.html"><img alt="鳥取ネクサス" src="images/logo.png"/><div class="logo-text"><span class="logo-main">TOTTORI NEXUS</span><span class="logo-sub">鳥取のホームページ制作</span></div></a><button aria-expanded="false" aria-label="メニューを開く" class="menu-button" id="menuButton" type="button"><span></span><span></span><span></span></button><nav class="nav" id="nav">
+<ul>
+<li><a data-nav="service" href="service.html">サービス</a></li>
+<li><a data-nav="works" href="works.html">制作実績</a></li>
+<li><a data-nav="price" href="price.html">料金</a></li>
+<li><a data-nav="faq" href="faq.html">よくある質問</a></li>
+<li><a class="nav-contact" data-nav="contact" href="contact.html">お問い合わせ</a></li>
+<li class="nav-about"><a data-nav="about" href="about.html">運営者情報</a></li>
+</ul>
+</nav></div></header>
 <main>
 <section class="page-hero"><div class="page-hero-inner"><p class="eyebrow">CONTACT</p><h1>お問い合わせ</h1><p>ホームページ制作が初めての方も、内容がまだ決まっていない方もお気軽にご相談ください。</p></div></section>
 <section class="section alt"><div class="section-inner">
 <div class="contact-purpose-grid">
-<a href="#contactForm" class="contact-purpose-card">
+<a class="contact-purpose-card" href="#contactForm">
 <p>NEW WEBSITE</p><h2>新規制作のご相談</h2>
 <span>ホームページの新規制作、リニューアル、料金相談はこちら。</span>
 <b>無料相談フォームへ →</b>
 </a>
-<a href="update-request.html" class="contact-purpose-card contact-purpose-update">
+<a class="contact-purpose-card contact-purpose-update" href="update-request.html">
 <p>UPDATE REQUEST</p><h2>更新を依頼する</h2>
 <span>文章、写真、営業時間、料金、お知らせなどの変更依頼はこちら。</span>
 <b>更新依頼フォームへ →</b>
 </a>
-<a href="trouble-report.html" class="contact-purpose-card contact-purpose-trouble">
+<a class="contact-purpose-card contact-purpose-trouble" href="trouble-report.html">
 <p>TROUBLE REPORT</p><h2>障害・不具合を報告</h2>
 <span>表示されない、レイアウト崩れ、リンク不具合などはこちら。</span>
 <b>障害受付フォームへ →</b>
 </a>
 </div>
 <div class="contact-layout">
-<section class="contact-form-card"><div class="section-heading contact-heading"><p class="section-en">CONTACT FORM</p><h2>無料相談フォーム</h2><p class="section-description">必要事項を入力すると、内容が記載されたメールを作成します。</p></div>
-<form id="contactForm" class="contact-form">
-<div class="form-row"><div class="form-group"><label for="customerName" class="form-label">お名前<span class="required-mark">必須</span></label><input id="customerName" name="customerName" type="text" class="form-control" autocomplete="name" required></div><div class="form-group"><label for="businessName" class="form-label">店舗名・会社名<span class="optional-mark">任意</span></label><input id="businessName" name="businessName" type="text" class="form-control" autocomplete="organization"></div></div>
-<div class="form-row"><div class="form-group"><label for="industry" class="form-label">業種<span class="required-mark">必須</span></label><select id="industry" name="industry" class="form-control" required><option value="">選択してください</option><option value="飲食店">飲食店</option><option value="美容室・サロン">美容室・サロン</option><option value="学習塾・教育">学習塾・教育</option><option value="建設・工務店">建設・工務店</option><option value="整体・治療院">整体・治療院</option><option value="小売店">小売店</option><option value="士業">士業</option><option value="その他">その他</option></select></div><div class="form-group"><label for="phone" class="form-label">電話番号<span class="optional-mark">任意</span></label><input id="phone" name="phone" type="tel" class="form-control" autocomplete="tel" inputmode="tel"></div></div>
-<div class="form-group"><label for="email" class="form-label">メールアドレス<span class="required-mark">必須</span></label><input id="email" name="email" type="email" class="form-control" autocomplete="email" required></div>
-<div class="form-row"><div class="form-group"><label for="plan" class="form-label">希望プラン<span class="required-mark">必須</span></label><select id="plan" name="plan" class="form-control" required><option value="">選択してください</option><option value="ライトプラン">ライトプラン</option><option value="スタンダードプラン">スタンダードプラン</option><option value="プレミアムプラン">プレミアムプラン</option><option value="Web運用サポート（月額5,000円）">Web運用サポート（月額5,000円）</option><option value="単発更新（13,200円〜）">単発更新（13,200円〜）</option><option value="まだ決まっていない">まだ決まっていない</option></select></div><div class="form-group"><label for="schedule" class="form-label">制作予定時期<span class="required-mark">必須</span></label><select id="schedule" name="schedule" class="form-control" required><option value="">選択してください</option><option value="できるだけ早く">できるだけ早く</option><option value="1か月以内">1か月以内</option><option value="2〜3か月以内">2〜3か月以内</option><option value="3か月以降">3か月以降</option><option value="未定">未定</option></select></div></div>
-<div class="form-group"><label for="message" class="form-label">ご相談内容<span class="required-mark">必須</span></label><textarea id="message" name="message" class="form-control" placeholder="現在のお悩み、掲載したい内容、参考にしたいサイトなどをご記入ください。" required></textarea><p class="form-help">内容がまだ決まっていない場合は「相談しながら決めたい」とご記入ください。</p></div>
-<div class="form-consent"><label><input type="checkbox" id="privacyConsent" required><span><a href="privacy.html">プライバシーポリシー</a>を確認し、個人情報の取扱いに同意します。</span></label></div>
-<button type="submit" class="button button-blue form-submit">メールを作成する</button><p class="form-note">ボタンを押すと、入力内容が記載された状態でメールアプリが開きます。自動送信はされません。</p>
+<section class="contact-form-card"><div class="section-heading contact-heading"><p class="section-en">CONTACT FORM</p><h2>無料相談フォーム</h2><p class="section-description">必要事項を入力して送信すると、そのまま鳥取ネクサスへ届きます。</p></div>
+<form action="https://formsubmit.co/info.tottorinexus@gmail.com" class="contact-form" data-direct-submit="true" id="contactForm" method="POST"><input autocomplete="off" name="_honey" style="display:none" tabindex="-1" type="text" value=""/><input name="フォーム種別" type="hidden" value="新規制作・リニューアル相談"/><input name="_autoresponse" type="hidden" value="鳥取ネクサスへのお問い合わせを受け付けました。内容を確認後、順次ご返信します。このメールは受付確認の自動返信です。"/><input name="_template" type="hidden" value="table"/><input name="_subject" type="hidden" value="【新規相談】鳥取ネクサス公式サイトからのお問い合わせ"/><input name="_next" type="hidden" value="https://tottorinexus.jp/thanks.html"/>
+<div class="form-row"><div class="form-group"><label class="form-label" for="customerName">お名前<span class="required-mark">必須</span></label><input autocomplete="name" class="form-control" id="customerName" name="お名前" required="" type="text"/></div><div class="form-group"><label class="form-label" for="businessName">店舗名・会社名<span class="optional-mark">任意</span></label><input autocomplete="organization" class="form-control" id="businessName" name="店舗名・会社名" type="text"/></div></div>
+<div class="form-row"><div class="form-group"><label class="form-label" for="industry">業種<span class="required-mark">必須</span></label><select class="form-control" id="industry" name="業種" required=""><option value="">選択してください</option><option value="飲食店">飲食店</option><option value="美容室・サロン">美容室・サロン</option><option value="学習塾・教育">学習塾・教育</option><option value="建設・工務店">建設・工務店</option><option value="整体・治療院">整体・治療院</option><option value="小売店">小売店</option><option value="士業">士業</option><option value="その他">その他</option></select></div><div class="form-group"><label class="form-label" for="phone">電話番号<span class="optional-mark">任意</span></label><input autocomplete="tel" class="form-control" id="phone" inputmode="tel" name="電話番号" type="tel"/></div></div>
+<div class="form-group"><label class="form-label" for="email">メールアドレス<span class="required-mark">必須</span></label><input autocomplete="email" class="form-control" id="email" name="email" required="" type="email"/></div>
+<div class="form-row"><div class="form-group"><label class="form-label" for="plan">希望プラン<span class="required-mark">必須</span></label><select class="form-control" id="plan" name="希望プラン" required=""><option value="">選択してください</option><option value="ライトプラン">ライトプラン</option><option value="スタンダードプラン">スタンダードプラン</option><option value="プレミアムプラン">プレミアムプラン</option><option value="Web運用サポート（月額5,000円）">Web運用サポート（月額5,000円）</option><option value="単発更新（13,200円〜）">単発更新（13,200円〜）</option><option value="まだ決まっていない">まだ決まっていない</option></select></div><div class="form-group"><label class="form-label" for="schedule">制作予定時期<span class="required-mark">必須</span></label><select class="form-control" id="schedule" name="制作予定時期" required=""><option value="">選択してください</option><option value="できるだけ早く">できるだけ早く</option><option value="1か月以内">1か月以内</option><option value="2〜3か月以内">2〜3か月以内</option><option value="3か月以降">3か月以降</option><option value="未定">未定</option></select></div></div>
+<div class="form-group"><label class="form-label" for="message">ご相談内容<span class="required-mark">必須</span></label><textarea class="form-control" id="message" name="ご相談内容" placeholder="現在のお悩み、掲載したい内容、参考にしたいサイトなどをご記入ください。" required=""></textarea><p class="form-help">内容がまだ決まっていない場合は「相談しながら決めたい」とご記入ください。</p></div>
+<div class="form-consent"><label><input id="privacyConsent" required="" type="checkbox"/><span><a href="privacy.html">プライバシーポリシー</a>を確認し、個人情報の取扱いに同意します。</span></label></div>
+<button class="button button-blue form-submit" data-submit-label="入力内容を送信する" type="submit">入力内容を送信する</button><p class="form-note">送信後は完了画面が表示されます。迷惑送信防止の確認画面が表示される場合があります。</p>
 </form></section>
-<aside class="contact-side"><section class="contact-method-card"><p class="section-en">EMAIL</p><h2>直接メールで相談</h2><p>フォームを使わず、直接メールを送ることもできます。</p><a href="mailto:info.tottorinexus@gmail.com" class="button button-outline">メールを開く</a><p class="contact-address">info.tottorinexus@gmail.com</p></section><section class="contact-method-card line-card">
+<aside class="contact-side"><section class="contact-method-card"><p class="section-en">EMAIL</p><h2>直接メールで相談</h2><p>フォームを使わず、直接メールを送ることもできます。</p><a class="button button-outline" href="mailto:info.tottorinexus@gmail.com">メールを開く</a><p class="contact-address">info.tottorinexus@gmail.com</p></section><section class="contact-method-card line-card">
 <p class="section-en">OFFICIAL LINE</p>
 <h2>公式LINEで相談</h2>
 <p>友だち追加後、トーク画面からそのままご相談いただけます。</p>
-<a href="line://ti/p/@722ogapk" target="_blank" rel="noopener noreferrer" class="line-qr-link" aria-label="鳥取ネクサス公式LINEを友だち追加">
-<img src="https://qr-official.line.me/gs/M_722ogapk_BW.png?oat_content=qr" alt="鳥取ネクサス公式LINE 友だち追加QRコード" class="line-qr">
+<a aria-label="鳥取ネクサス公式LINEを友だち追加" class="line-qr-link" href="line://ti/p/@722ogapk" rel="noopener noreferrer" target="_blank">
+<img alt="鳥取ネクサス公式LINE 友だち追加QRコード" class="line-qr" src="https://qr-official.line.me/gs/M_722ogapk_BW.png?oat_content=qr"/>
 </a>
-<a href="line://ti/p/@722ogapk" target="_blank" rel="noopener noreferrer" class="button line-button">LINEで友だち追加</a>
-</section><section class="contact-method-card instagram-card"><p class="section-en">INSTAGRAM</p><h2>DMで相談</h2><p>簡単な質問は、公式InstagramのDMでも受け付けています。</p><a href="https://www.instagram.com/tottori.nexus/" target="_blank" rel="noopener noreferrer" class="button instagram-button">@tottori.nexus</a></section><section class="contact-method-card"><p class="section-en">RESPONSE</p><h2>お問い合わせ対応</h2><p class="response-time">順次ご返信</p><p>メール・フォームは24時間受け付けています。内容を確認後、可能な限り早くご返信します。</p></section></aside>
-</div></div></div></section>
+<a class="button line-button" href="line://ti/p/@722ogapk" rel="noopener noreferrer" target="_blank">LINEで友だち追加</a>
+</section><section class="contact-method-card instagram-card"><p class="section-en">INSTAGRAM</p><h2>DMで相談</h2><p>簡単な質問は、公式InstagramのDMでも受け付けています。</p><a class="button instagram-button" href="https://www.instagram.com/tottori.nexus/" rel="noopener noreferrer" target="_blank">@tottori.nexus</a></section><section class="contact-method-card"><p class="section-en">RESPONSE</p><h2>お問い合わせ対応</h2><p class="response-time">順次ご返信</p><p>メール・フォームは24時間受け付けています。内容を確認後、可能な限り早くご返信します。</p></section></aside>
+</div></div></section>
 </main>
 <footer class="footer"><div class="footer-inner"><div><p class="footer-logo">TOTTORI NEXUS</p><p>鳥取県の店舗・企業向けホームページ制作</p><div class="footer-links"><a href="about.html">運営者情報</a><a href="service.html">サービス</a><a href="why.html">選ばれる理由</a>
-                <a href="compare.html">サービス比較</a><a href="works.html">制作実績</a><a href="price.html">料金</a><a href="flow.html">制作の流れ</a><a href="area.html">対応エリア</a><a href="faq.html">よくある質問</a><a href="contact.html">お問い合わせ</a><a href="privacy.html">プライバシーポリシー</a></div><a href="https://www.instagram.com/tottori.nexus/" target="_blank" rel="noopener noreferrer" class="footer-instagram">Instagram：@tottori.nexus</a><a href="line://ti/p/@722ogapk" target="_blank" rel="noopener noreferrer" class="footer-line">公式LINE：友だち追加</a></div><p>© 2026 TOTTORI NEXUS</p></div></footer>
+<a href="compare.html">サービス比較</a><a href="works.html">制作実績</a><a href="price.html">料金</a><a href="flow.html">制作の流れ</a><a href="area.html">対応エリア</a><a href="faq.html">よくある質問</a><a href="contact.html">お問い合わせ</a><a href="privacy.html">プライバシーポリシー</a></div><a class="footer-instagram" href="https://www.instagram.com/tottori.nexus/" rel="noopener noreferrer" target="_blank">Instagram：@tottori.nexus</a><a class="footer-line" href="line://ti/p/@722ogapk" rel="noopener noreferrer" target="_blank">公式LINE：友だち追加</a></div><p>© 2026 TOTTORI NEXUS</p></div></footer>
 <script src="script.js"></script>
-<script>
-const contactForm=document.getElementById("contactForm");
-contactForm.addEventListener("submit",(event)=>{event.preventDefault();if(!contactForm.reportValidity())return;const formData=new FormData(contactForm);const customerName=String(formData.get("customerName")||"").trim();const businessName=String(formData.get("businessName")||"").trim();const industry=String(formData.get("industry")||"").trim();const phone=String(formData.get("phone")||"").trim();const email=String(formData.get("email")||"").trim();const plan=String(formData.get("plan")||"").trim();const schedule=String(formData.get("schedule")||"").trim();const message=String(formData.get("message")||"").trim();const subject=`ホームページ制作のご相談（${customerName}様）`;const body=["鳥取ネクサス ご担当者様","","ホームページ制作について相談します。","","【お名前】",customerName,"","【店舗名・会社名】",businessName||"未入力","","【業種】",industry,"","【電話番号】",phone||"未入力","","【メールアドレス】",email,"","【希望プラン】",plan,"","【制作予定時期】",schedule,"","【ご相談内容】",message].join("\n");window.location.href="mailto:info.tottorinexus@gmail.com"+`?subject=${encodeURIComponent(subject)}`+`&body=${encodeURIComponent(body)}`;});
-</script>
 
-<a href="line://ti/p/@722ogapk" target="_blank" rel="noopener noreferrer"
-   class="floating-line" aria-label="鳥取ネクサス公式LINEを友だち追加">
-    <span class="floating-line-icon" aria-hidden="true">LINE</span>
-    <span class="floating-line-text">LINEで相談</span>
+<a aria-label="鳥取ネクサス公式LINEを友だち追加" class="floating-line" href="line://ti/p/@722ogapk" rel="noopener noreferrer" target="_blank">
+<span aria-hidden="true" class="floating-line-icon">LINE</span>
+<span class="floating-line-text">LINEで相談</span>
 </a>
-
 </body>
 </html>

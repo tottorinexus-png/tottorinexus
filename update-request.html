@@ -1,23 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="鳥取ネクサスで制作したホームページの文章、写真、営業時間、料金、お知らせなどの更新依頼フォームです。">
-<meta name="robots" content="noindex,follow">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="鳥取ネクサスで制作したホームページの文章、写真、営業時間、料金、お知らせなどの更新依頼フォームです。" name="description"/>
+<meta content="noindex,follow" name="robots"/>
 <title>更新依頼フォーム｜鳥取ネクサス</title>
-<link rel="icon" type="image/png" href="images/logo.png">
-<link rel="stylesheet" href="style.css">
+<link href="images/logo.png" rel="icon" type="image/png"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body data-page="update-request">
-<header class="header"><div class="header-inner"><a href="index.html" class="logo"><img src="images/logo.png" alt="鳥取ネクサス"><div class="logo-text"><span class="logo-main">TOTTORI NEXUS</span><span class="logo-sub">鳥取のホームページ制作</span></div></a><button class="menu-button" id="menuButton" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav" id="nav">
+<header class="header"><div class="header-inner"><a class="logo" href="index.html"><img alt="鳥取ネクサス" src="images/logo.png"/><div class="logo-text"><span class="logo-main">TOTTORI NEXUS</span><span class="logo-sub">鳥取のホームページ制作</span></div></a><button aria-expanded="false" aria-label="メニューを開く" class="menu-button" id="menuButton" type="button"><span></span><span></span><span></span></button><nav class="nav" id="nav">
 <ul>
-<li><a href="service.html" data-nav="service">サービス</a></li>
-<li><a href="works.html" data-nav="works">制作実績</a></li>
-<li><a href="price.html" data-nav="price">料金</a></li>
-<li><a href="faq.html" data-nav="faq">よくある質問</a></li>
-<li><a href="contact.html" data-nav="contact" class="nav-contact">お問い合わせ</a></li>
-<li class="nav-about"><a href="about.html" data-nav="about">運営者情報</a></li>
+<li><a data-nav="service" href="service.html">サービス</a></li>
+<li><a data-nav="works" href="works.html">制作実績</a></li>
+<li><a data-nav="price" href="price.html">料金</a></li>
+<li><a data-nav="faq" href="faq.html">よくある質問</a></li>
+<li><a class="nav-contact" data-nav="contact" href="contact.html">お問い合わせ</a></li>
+<li class="nav-about"><a data-nav="about" href="about.html">運営者情報</a></li>
 </ul>
 </nav></div></header>
 <main>
@@ -28,7 +29,6 @@
 <p>文章・写真・営業時間・料金・お知らせなど、公開済みホームページの変更をご依頼いただけます。</p>
 </div>
 </section>
-
 <section class="section alt support-form-section">
 <div class="section-inner">
 <div class="support-notice-grid">
@@ -45,36 +45,31 @@
 <article class="support-notice-card support-notice-blue">
 <p class="section-en">ATTACHMENT</p>
 <h2>写真や資料がある場合</h2>
-<p>フォーム入力後にメールアプリが開きます。写真、PDF、原稿資料などは、そのメールへ添付して送信してください。</p>
-<a href="line://ti/p/@722ogapk" target="_blank" rel="noopener noreferrer" class="button button-line">LINEで相談する</a>
+<p>フォーム内で写真・PDF・原稿資料を添付し、そのまま送信できます。</p>
+<a class="button button-line" href="line://ti/p/@722ogapk" rel="noopener noreferrer" target="_blank">LINEで相談する</a>
 </article>
 </div>
-
 <div class="support-layout">
 <section class="support-form-card">
 <div class="section-heading support-heading">
 <p class="section-en">FORM</p>
 <h2>更新内容を入力</h2>
-<p class="section-description">入力内容を記載したメールを作成します。自動送信はされません。</p>
+<p class="section-description">必要事項と資料を入力して送信すると、そのまま鳥取ネクサスへ届きます。</p>
 </div>
-
-<form id="updateRequestForm" class="support-form">
+<form action="https://formsubmit.co/info.tottorinexus@gmail.com" class="support-form" data-direct-submit="true" enctype="multipart/form-data" id="updateRequestForm" method="POST"><input autocomplete="off" name="_honey" style="display:none" tabindex="-1" type="text" value=""/><input name="フォーム種別" type="hidden" value="ホームページ更新依頼"/><input name="_autoresponse" type="hidden" value="鳥取ネクサスへの更新依頼を受け付けました。内容・料金・対応予定日を確認後にご連絡します。このメールは受付確認の自動返信です。"/><input name="_template" type="hidden" value="table"/><input name="_subject" type="hidden" value="【更新依頼】鳥取ネクサス公式サイト"/><input name="_next" type="hidden" value="https://tottorinexus.jp/thanks.html"/>
 <div class="form-row">
-<div class="form-group"><label for="customerName" class="form-label">お名前<span class="required-mark">必須</span></label><input id="customerName" name="customerName" type="text" class="form-control" autocomplete="name" required></div>
-<div class="form-group"><label for="businessName" class="form-label">店舗名・会社名<span class="required-mark">必須</span></label><input id="businessName" name="businessName" type="text" class="form-control" autocomplete="organization" required></div>
+<div class="form-group"><label class="form-label" for="customerName">お名前<span class="required-mark">必須</span></label><input autocomplete="name" class="form-control" id="customerName" name="お名前" required="" type="text"/></div>
+<div class="form-group"><label class="form-label" for="businessName">店舗名・会社名<span class="required-mark">必須</span></label><input autocomplete="organization" class="form-control" id="businessName" name="店舗名・会社名" required="" type="text"/></div>
 </div>
-
 <div class="form-row">
-<div class="form-group"><label for="email" class="form-label">メールアドレス<span class="required-mark">必須</span></label><input id="email" name="email" type="email" class="form-control" autocomplete="email" required></div>
-<div class="form-group"><label for="phone" class="form-label">電話番号<span class="optional-mark">任意</span></label><input id="phone" name="phone" type="tel" class="form-control" autocomplete="tel" inputmode="tel"></div>
+<div class="form-group"><label class="form-label" for="email">メールアドレス<span class="required-mark">必須</span></label><input autocomplete="email" class="form-control" id="email" name="email" required="" type="email"/></div>
+<div class="form-group"><label class="form-label" for="phone">電話番号<span class="optional-mark">任意</span></label><input autocomplete="tel" class="form-control" id="phone" inputmode="tel" name="電話番号" type="tel"/></div>
 </div>
-
-<div class="form-group"><label for="siteUrl" class="form-label">対象サイトのURL<span class="required-mark">必須</span></label><input id="siteUrl" name="siteUrl" type="url" class="form-control" placeholder="https://example.com/" required></div>
-
+<div class="form-group"><label class="form-label" for="siteUrl">対象サイトのURL<span class="required-mark">必須</span></label><input class="form-control" id="siteUrl" name="対象サイトURL" placeholder="https://example.com/" required="" type="url"/></div>
 <div class="form-row">
 <div class="form-group">
-<label for="contractType" class="form-label">ご利用状況<span class="required-mark">必須</span></label>
-<select id="contractType" name="contractType" class="form-control" required>
+<label class="form-label" for="contractType">ご利用状況<span class="required-mark">必須</span></label>
+<select class="form-control" id="contractType" name="ご利用状況" required="">
 <option value="">選択してください</option>
 <option value="Web運用サポート加入中">Web運用サポート加入中</option>
 <option value="単発更新を希望">単発更新を希望</option>
@@ -82,8 +77,8 @@
 </select>
 </div>
 <div class="form-group">
-<label for="updateType" class="form-label">更新内容<span class="required-mark">必須</span></label>
-<select id="updateType" name="updateType" class="form-control" required>
+<label class="form-label" for="updateType">更新内容<span class="required-mark">必須</span></label>
+<select class="form-control" id="updateType" name="更新内容" required="">
 <option value="">選択してください</option>
 <option value="文章の変更">文章の変更</option>
 <option value="写真の差し替え">写真の差し替え</option>
@@ -95,18 +90,14 @@
 </select>
 </div>
 </div>
-
-<div class="form-group"><label for="targetPage" class="form-label">変更するページ・場所<span class="required-mark">必須</span></label><textarea id="targetPage" name="targetPage" class="form-control support-textarea-small" placeholder="例：トップページの営業時間欄、料金ページのスタンダードプラン" required></textarea></div>
-
-<div class="form-group"><label for="currentContent" class="form-label">現在の内容<span class="optional-mark">任意</span></label><textarea id="currentContent" name="currentContent" class="form-control support-textarea-small" placeholder="現在表示されている文章や内容をご記入ください。"></textarea></div>
-
-<div class="form-group"><label for="newContent" class="form-label">変更後の内容<span class="required-mark">必須</span></label><textarea id="newContent" name="newContent" class="form-control" placeholder="変更後に掲載したい文章、情報、リンクなどを具体的にご記入ください。" required></textarea></div>
-
+<div class="form-group"><label class="form-label" for="targetPage">変更するページ・場所<span class="required-mark">必須</span></label><textarea class="form-control support-textarea-small" id="targetPage" name="変更するページ・場所" placeholder="例：トップページの営業時間欄、料金ページのスタンダードプラン" required=""></textarea></div>
+<div class="form-group"><label class="form-label" for="currentContent">現在の内容<span class="optional-mark">任意</span></label><textarea class="form-control support-textarea-small" id="currentContent" name="現在の内容" placeholder="現在表示されている文章や内容をご記入ください。"></textarea></div>
+<div class="form-group"><label class="form-label" for="newContent">変更後の内容<span class="required-mark">必須</span></label><textarea class="form-control" id="newContent" name="変更後の内容" placeholder="変更後に掲載したい文章、情報、リンクなどを具体的にご記入ください。" required=""></textarea></div>
 <div class="form-row">
-<div class="form-group"><label for="desiredDate" class="form-label">希望対応日<span class="optional-mark">任意</span></label><input id="desiredDate" name="desiredDate" type="date" class="form-control"></div>
+<div class="form-group"><label class="form-label" for="desiredDate">希望対応日<span class="optional-mark">任意</span></label><input class="form-control" id="desiredDate" name="希望対応日" type="date"/></div>
 <div class="form-group">
-<label for="priority" class="form-label">優先度<span class="required-mark">必須</span></label>
-<select id="priority" name="priority" class="form-control" required>
+<label class="form-label" for="priority">優先度<span class="required-mark">必須</span></label>
+<select class="form-control" id="priority" name="優先度" required="">
 <option value="">選択してください</option>
 <option value="通常">通常</option>
 <option value="できるだけ早く">できるだけ早く</option>
@@ -115,32 +106,39 @@
 </div>
 </div>
 
-<div class="support-file-note"><strong>写真・PDF・資料の添付</strong><p>メール作成後、開いたメールアプリでファイルを添付してください。</p></div>
-
-<div class="form-group"><label for="notes" class="form-label">補足事項<span class="optional-mark">任意</span></label><textarea id="notes" name="notes" class="form-control support-textarea-small" placeholder="掲載期限、画像の並び順、注意点などがあればご記入ください。"></textarea></div>
-
-<div class="form-consent"><label><input type="checkbox" id="privacyConsent" required><span><a href="privacy.html">プライバシーポリシー</a>を確認し、個人情報の取扱いに同意します。</span></label></div>
-
-<div class="support-submit-grid">
-<button type="submit" class="button button-blue form-submit">更新依頼メールを作成</button>
-<button type="button" id="copyUpdateRequest" class="button button-outline form-submit">入力内容をコピー</button>
+<div class="support-file-upload">
+<div class="support-file-upload-heading">
+<strong>写真・PDF・原稿資料を添付</strong>
+<span>任意</span>
 </div>
-<p id="copyStatus" class="form-note" aria-live="polite">内容を確認し、必要なファイルを添付してから送信してください。</p>
+<p>画像・PDF・Word資料を2点まで添付できます。合計10MB以内を目安にしてください。</p>
+<div class="file-input-grid">
+<label>添付ファイル1<input accept=".jpg,.jpeg,.png,.webp,.pdf,.doc,.docx" name="添付ファイル1" type="file"/></label>
+<label>添付ファイル2<input accept=".jpg,.jpeg,.png,.webp,.pdf,.doc,.docx" name="添付ファイル2" type="file"/></label>
+</div>
+</div>
+
+<div class="form-group"><label class="form-label" for="notes">補足事項<span class="optional-mark">任意</span></label><textarea class="form-control support-textarea-small" id="notes" name="補足事項" placeholder="掲載期限、画像の並び順、注意点などがあればご記入ください。"></textarea></div>
+<div class="form-consent"><label><input id="privacyConsent" required="" type="checkbox"/><span><a href="privacy.html">プライバシーポリシー</a>を確認し、個人情報の取扱いに同意します。</span></label></div>
+<div class="support-submit-single">
+<button class="button button-blue form-submit" data-submit-label="更新依頼を送信する" type="submit">更新依頼を送信する</button>
+
+</div>
+<p class="form-note">送信後は完了画面が表示されます。料金・対応予定日は内容確認後にご連絡します。</p>
 </form>
 </section>
-
 <aside class="support-side">
 <article class="support-side-card">
 <p class="section-en">TROUBLE REPORT</p>
 <h2>サイトの不具合ですか？</h2>
 <p>表示されない、レイアウトが崩れる、ボタンが動かない場合は障害受付フォームをご利用ください。</p>
-<a href="trouble-report.html" class="button button-outline">障害・不具合を報告</a>
+<a class="button button-outline" href="trouble-report.html">障害・不具合を報告</a>
 </article>
 <article class="support-side-card">
 <p class="section-en">CONTACT</p>
 <h2>入力に迷う場合</h2>
 <p>変更箇所のスクリーンショットを添えて、公式LINEからご相談ください。</p>
-<a href="line://ti/p/@722ogapk" target="_blank" rel="noopener noreferrer" class="button button-line">公式LINEを開く</a>
+<a class="button button-line" href="line://ti/p/@722ogapk" rel="noopener noreferrer" target="_blank">公式LINEを開く</a>
 </article>
 </aside>
 </div>
@@ -149,49 +147,9 @@
 </main>
 <footer class="footer"><div class="footer-inner"><div><p class="footer-logo">TOTTORI NEXUS</p><p>鳥取県の店舗・企業向けホームページ制作</p><div class="footer-links">
 <a href="service.html">サービス</a><a href="works.html">制作実績</a><a href="price.html">料金</a><a href="faq.html">よくある質問</a><a href="contact.html">お問い合わせ</a><a href="update-request.html">更新依頼</a><a href="trouble-report.html">障害・不具合受付</a><a href="about.html">運営者情報</a><a href="why.html">選ばれる理由</a><a href="compare.html">料金比較</a><a href="flow.html">制作の流れ</a><a href="area.html">対応エリア</a><a href="privacy.html">プライバシーポリシー</a>
-</div><a href="https://www.instagram.com/tottori.nexus/" target="_blank" rel="noopener noreferrer" class="footer-instagram">Instagram：@tottori.nexus</a><a href="line://ti/p/@722ogapk" target="_blank" rel="noopener noreferrer" class="footer-line">公式LINE：友だち追加</a></div><p>© 2026 TOTTORI NEXUS</p></div></footer>
+</div><a class="footer-instagram" href="https://www.instagram.com/tottori.nexus/" rel="noopener noreferrer" target="_blank">Instagram：@tottori.nexus</a><a class="footer-line" href="line://ti/p/@722ogapk" rel="noopener noreferrer" target="_blank">公式LINE：友だち追加</a></div><p>© 2026 TOTTORI NEXUS</p></div></footer>
 <script src="script.js"></script>
-<script>
-const updateForm=document.getElementById("updateRequestForm");
-const copyUpdateButton=document.getElementById("copyUpdateRequest");
-const updateCopyStatus=document.getElementById("copyStatus");
-function buildUpdateMail(){
-const data=new FormData(updateForm);
-const value=(name)=>String(data.get(name)||"").trim();
-const body=[
-"鳥取ネクサス ご担当者様","","ホームページの更新を依頼します。","",
-"【お名前】",value("customerName"),"",
-"【店舗名・会社名】",value("businessName"),"",
-"【メールアドレス】",value("email"),"",
-"【電話番号】",value("phone")||"未入力","",
-"【対象サイトURL】",value("siteUrl"),"",
-"【ご利用状況】",value("contractType"),"",
-"【更新内容】",value("updateType"),"",
-"【変更するページ・場所】",value("targetPage"),"",
-"【現在の内容】",value("currentContent")||"未入力","",
-"【変更後の内容】",value("newContent"),"",
-"【希望対応日】",value("desiredDate")||"指定なし","",
-"【優先度】",value("priority"),"",
-"【補足事項】",value("notes")||"未入力","",
-"※写真・PDF・資料がある場合は、このメールに添付します。"
-].join("\n");
-return {subject:`ホームページ更新依頼（${value("businessName")}）`,body};
-}
-updateForm.addEventListener("submit",(event)=>{
-event.preventDefault();
-if(!updateForm.reportValidity())return;
-const mail=buildUpdateMail();
-window.location.href=`mailto:info.tottorinexus@gmail.com?subject=${encodeURIComponent(mail.subject)}&body=${encodeURIComponent(mail.body)}`;
-});
-copyUpdateButton.addEventListener("click",async()=>{
-if(!updateForm.reportValidity())return;
-const mail=buildUpdateMail();
-const text=`件名：${mail.subject}\n\n${mail.body}`;
-try{await navigator.clipboard.writeText(text);}
-catch(error){const area=document.createElement("textarea");area.value=text;document.body.appendChild(area);area.select();document.execCommand("copy");area.remove();}
-updateCopyStatus.textContent="入力内容をコピーしました。";
-});
-</script>
-<a href="line://ti/p/@722ogapk" target="_blank" rel="noopener noreferrer" class="floating-line" aria-label="鳥取ネクサス公式LINEを友だち追加"><span class="floating-line-icon" aria-hidden="true">LINE</span><span class="floating-line-text">LINEで相談</span></a>
+
+<a aria-label="鳥取ネクサス公式LINEを友だち追加" class="floating-line" href="line://ti/p/@722ogapk" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="floating-line-icon">LINE</span><span class="floating-line-text">LINEで相談</span></a>
 </body>
 </html>

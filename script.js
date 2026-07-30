@@ -130,3 +130,18 @@ if (opening) {
 } else {
     revealPage();
 }
+
+
+// Direct form submission: prevent duplicate submissions
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("form[data-direct-submit='true']").forEach((form) => {
+        form.addEventListener("submit", () => {
+            if (!form.checkValidity()) return;
+            const button = form.querySelector("button[type='submit']");
+            if (!button) return;
+            button.disabled = true;
+            button.setAttribute("aria-busy", "true");
+            button.textContent = "送信中...";
+        });
+    });
+});

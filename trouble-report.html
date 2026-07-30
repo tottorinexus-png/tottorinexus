@@ -1,23 +1,24 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="鳥取ネクサスで制作したホームページの表示・動作に関する障害、不具合の受付フォームです。">
-<meta name="robots" content="noindex,follow">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="鳥取ネクサスで制作したホームページの表示・動作に関する障害、不具合の受付フォームです。" name="description"/>
+<meta content="noindex,follow" name="robots"/>
 <title>障害・不具合受付フォーム｜鳥取ネクサス</title>
-<link rel="icon" type="image/png" href="images/logo.png">
-<link rel="stylesheet" href="style.css">
+<link href="images/logo.png" rel="icon" type="image/png"/>
+<link href="style.css" rel="stylesheet"/>
 </head>
 <body data-page="trouble-report">
-<header class="header"><div class="header-inner"><a href="index.html" class="logo"><img src="images/logo.png" alt="鳥取ネクサス"><div class="logo-text"><span class="logo-main">TOTTORI NEXUS</span><span class="logo-sub">鳥取のホームページ制作</span></div></a><button class="menu-button" id="menuButton" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav" id="nav">
+<header class="header"><div class="header-inner"><a class="logo" href="index.html"><img alt="鳥取ネクサス" src="images/logo.png"/><div class="logo-text"><span class="logo-main">TOTTORI NEXUS</span><span class="logo-sub">鳥取のホームページ制作</span></div></a><button aria-expanded="false" aria-label="メニューを開く" class="menu-button" id="menuButton" type="button"><span></span><span></span><span></span></button><nav class="nav" id="nav">
 <ul>
-<li><a href="service.html" data-nav="service">サービス</a></li>
-<li><a href="works.html" data-nav="works">制作実績</a></li>
-<li><a href="price.html" data-nav="price">料金</a></li>
-<li><a href="faq.html" data-nav="faq">よくある質問</a></li>
-<li><a href="contact.html" data-nav="contact" class="nav-contact">お問い合わせ</a></li>
-<li class="nav-about"><a href="about.html" data-nav="about">運営者情報</a></li>
+<li><a data-nav="service" href="service.html">サービス</a></li>
+<li><a data-nav="works" href="works.html">制作実績</a></li>
+<li><a data-nav="price" href="price.html">料金</a></li>
+<li><a data-nav="faq" href="faq.html">よくある質問</a></li>
+<li><a class="nav-contact" data-nav="contact" href="contact.html">お問い合わせ</a></li>
+<li class="nav-about"><a data-nav="about" href="about.html">運営者情報</a></li>
 </ul>
 </nav></div></header>
 <main>
@@ -28,14 +29,12 @@
 <p>サイトが表示されない、表示が崩れる、ボタンが動かないなどの不具合をご報告ください。</p>
 </div>
 </section>
-
 <section class="section alt support-form-section">
 <div class="section-inner">
 <div class="security-alert">
 <div><p class="section-en">IMPORTANT</p><h2>認証情報は送らないでください</h2></div>
 <p>パスワード、秘密鍵、サーバー認証情報、クレジットカード情報などはフォームやメールに記載しないでください。</p>
 </div>
-
 <div class="support-notice-grid">
 <article class="support-notice-card">
 <p class="section-en">FREE SUPPORT</p>
@@ -46,10 +45,9 @@
 <p class="section-en">URGENT</p>
 <h2>サイト全体が表示されない場合</h2>
 <p>フォーム送信後、公式LINEでも「障害受付済み」とご連絡いただくと確認が早くなります。</p>
-<a href="line://ti/p/@722ogapk" target="_blank" rel="noopener noreferrer" class="button button-line">公式LINEを開く</a>
+<a class="button button-line" href="line://ti/p/@722ogapk" rel="noopener noreferrer" target="_blank">公式LINEを開く</a>
 </article>
 </div>
-
 <div class="support-layout">
 <section class="support-form-card">
 <div class="section-heading support-heading">
@@ -57,24 +55,20 @@
 <h2>不具合の状況を入力</h2>
 <p class="section-description">発生状況を詳しくご記入いただくと、原因確認がスムーズになります。</p>
 </div>
-
-<form id="troubleReportForm" class="support-form">
+<form action="https://formsubmit.co/info.tottorinexus@gmail.com" class="support-form" data-direct-submit="true" enctype="multipart/form-data" id="troubleReportForm" method="POST"><input autocomplete="off" name="_honey" style="display:none" tabindex="-1" type="text" value=""/><input name="フォーム種別" type="hidden" value="障害・不具合報告"/><input name="_autoresponse" type="hidden" value="鳥取ネクサスへの障害・不具合報告を受け付けました。内容を確認後、順次ご連絡します。このメールは受付確認の自動返信です。"/><input name="_template" type="hidden" value="table"/><input name="_subject" type="hidden" value="【障害・不具合受付】鳥取ネクサス公式サイト"/><input name="_next" type="hidden" value="https://tottorinexus.jp/thanks.html"/>
 <div class="form-row">
-<div class="form-group"><label for="customerName" class="form-label">お名前<span class="required-mark">必須</span></label><input id="customerName" name="customerName" type="text" class="form-control" autocomplete="name" required></div>
-<div class="form-group"><label for="businessName" class="form-label">店舗名・会社名<span class="required-mark">必須</span></label><input id="businessName" name="businessName" type="text" class="form-control" autocomplete="organization" required></div>
+<div class="form-group"><label class="form-label" for="customerName">お名前<span class="required-mark">必須</span></label><input autocomplete="name" class="form-control" id="customerName" name="お名前" required="" type="text"/></div>
+<div class="form-group"><label class="form-label" for="businessName">店舗名・会社名<span class="required-mark">必須</span></label><input autocomplete="organization" class="form-control" id="businessName" name="店舗名・会社名" required="" type="text"/></div>
 </div>
-
 <div class="form-row">
-<div class="form-group"><label for="email" class="form-label">メールアドレス<span class="required-mark">必須</span></label><input id="email" name="email" type="email" class="form-control" autocomplete="email" required></div>
-<div class="form-group"><label for="phone" class="form-label">電話番号<span class="optional-mark">任意</span></label><input id="phone" name="phone" type="tel" class="form-control" autocomplete="tel" inputmode="tel"></div>
+<div class="form-group"><label class="form-label" for="email">メールアドレス<span class="required-mark">必須</span></label><input autocomplete="email" class="form-control" id="email" name="email" required="" type="email"/></div>
+<div class="form-group"><label class="form-label" for="phone">電話番号<span class="optional-mark">任意</span></label><input autocomplete="tel" class="form-control" id="phone" inputmode="tel" name="電話番号" type="tel"/></div>
 </div>
-
-<div class="form-group"><label for="siteUrl" class="form-label">対象サイトのURL<span class="required-mark">必須</span></label><input id="siteUrl" name="siteUrl" type="url" class="form-control" placeholder="https://example.com/" required></div>
-
+<div class="form-group"><label class="form-label" for="siteUrl">対象サイトのURL<span class="required-mark">必須</span></label><input class="form-control" id="siteUrl" name="対象サイトURL" placeholder="https://example.com/" required="" type="url"/></div>
 <div class="form-row">
 <div class="form-group">
-<label for="troubleType" class="form-label">不具合の種類<span class="required-mark">必須</span></label>
-<select id="troubleType" name="troubleType" class="form-control" required>
+<label class="form-label" for="troubleType">不具合の種類<span class="required-mark">必須</span></label>
+<select class="form-control" id="troubleType" name="不具合の種類" required="">
 <option value="">選択してください</option>
 <option value="サイト全体が表示されない">サイト全体が表示されない</option>
 <option value="一部のページが表示されない">一部のページが表示されない</option>
@@ -87,8 +81,8 @@
 </select>
 </div>
 <div class="form-group">
-<label for="severity" class="form-label">影響度<span class="required-mark">必須</span></label>
-<select id="severity" name="severity" class="form-control" required>
+<label class="form-label" for="severity">影響度<span class="required-mark">必須</span></label>
+<select class="form-control" id="severity" name="影響度" required="">
 <option value="">選択してください</option>
 <option value="緊急：サイト全体が利用できない">緊急：サイト全体が利用できない</option>
 <option value="高：主要なページ・機能が利用できない">高：主要なページ・機能が利用できない</option>
@@ -97,12 +91,11 @@
 </select>
 </div>
 </div>
-
 <div class="form-row">
-<div class="form-group"><label for="occurredAt" class="form-label">発生日時<span class="optional-mark">任意</span></label><input id="occurredAt" name="occurredAt" type="datetime-local" class="form-control"></div>
+<div class="form-group"><label class="form-label" for="occurredAt">発生日時<span class="optional-mark">任意</span></label><input class="form-control" id="occurredAt" name="発生日時" type="datetime-local"/></div>
 <div class="form-group">
-<label for="frequency" class="form-label">発生頻度<span class="required-mark">必須</span></label>
-<select id="frequency" name="frequency" class="form-control" required>
+<label class="form-label" for="frequency">発生頻度<span class="required-mark">必須</span></label>
+<select class="form-control" id="frequency" name="発生頻度" required="">
 <option value="">選択してください</option>
 <option value="毎回発生する">毎回発生する</option>
 <option value="時々発生する">時々発生する</option>
@@ -111,11 +104,10 @@
 </select>
 </div>
 </div>
-
 <div class="form-row">
 <div class="form-group">
-<label for="device" class="form-label">使用端末<span class="required-mark">必須</span></label>
-<select id="device" name="device" class="form-control" required>
+<label class="form-label" for="device">使用端末<span class="required-mark">必須</span></label>
+<select class="form-control" id="device" name="使用端末" required="">
 <option value="">選択してください</option>
 <option value="iPhone">iPhone</option>
 <option value="Androidスマートフォン">Androidスマートフォン</option>
@@ -127,8 +119,8 @@
 </select>
 </div>
 <div class="form-group">
-<label for="browser" class="form-label">使用ブラウザ<span class="required-mark">必須</span></label>
-<select id="browser" name="browser" class="form-control" required>
+<label class="form-label" for="browser">使用ブラウザ<span class="required-mark">必須</span></label>
+<select class="form-control" id="browser" name="使用ブラウザ" required="">
 <option value="">選択してください</option>
 <option value="Safari">Safari</option>
 <option value="Google Chrome">Google Chrome</option>
@@ -139,35 +131,38 @@
 </select>
 </div>
 </div>
+<div class="form-group"><label class="form-label" for="affectedPage">問題が起きているページ<span class="required-mark">必須</span></label><input class="form-control" id="affectedPage" name="問題が起きているページ" placeholder="ページ名またはURLをご記入ください。" required="" type="text"/></div>
+<div class="form-group"><label class="form-label" for="symptom">症状・表示内容<span class="required-mark">必須</span></label><textarea class="form-control" id="symptom" name="症状・表示内容" placeholder="何をしようとしたとき、どのような表示や動作になったかをご記入ください。" required=""></textarea></div>
+<div class="form-group"><label class="form-label" for="steps">発生までの操作手順<span class="optional-mark">任意</span></label><textarea class="form-control support-textarea-small" id="steps" name="発生までの操作手順" placeholder="例：トップページを開く → 料金を押す → 404と表示される"></textarea></div>
+<div class="form-group"><label class="form-label" for="errorMessage">エラーメッセージ<span class="optional-mark">任意</span></label><textarea class="form-control support-textarea-small" id="errorMessage" name="エラーメッセージ" placeholder="表示された文章やエラー番号を、そのままご記入ください。"></textarea></div>
 
-<div class="form-group"><label for="affectedPage" class="form-label">問題が起きているページ<span class="required-mark">必須</span></label><input id="affectedPage" name="affectedPage" type="text" class="form-control" placeholder="ページ名またはURLをご記入ください。" required></div>
-
-<div class="form-group"><label for="symptom" class="form-label">症状・表示内容<span class="required-mark">必須</span></label><textarea id="symptom" name="symptom" class="form-control" placeholder="何をしようとしたとき、どのような表示や動作になったかをご記入ください。" required></textarea></div>
-
-<div class="form-group"><label for="steps" class="form-label">発生までの操作手順<span class="optional-mark">任意</span></label><textarea id="steps" name="steps" class="form-control support-textarea-small" placeholder="例：トップページを開く → 料金を押す → 404と表示される"></textarea></div>
-
-<div class="form-group"><label for="errorMessage" class="form-label">エラーメッセージ<span class="optional-mark">任意</span></label><textarea id="errorMessage" name="errorMessage" class="form-control support-textarea-small" placeholder="表示された文章やエラー番号を、そのままご記入ください。"></textarea></div>
-
-<div class="support-file-note support-file-note-red"><strong>スクリーンショットの添付をお願いします</strong><p>メール作成後、開いたメールアプリで不具合画面の画像を添付してください。</p></div>
-
-<div class="form-group"><label for="recentChanges" class="form-label">直前に行った変更<span class="optional-mark">任意</span></label><textarea id="recentChanges" name="recentChanges" class="form-control support-textarea-small" placeholder="文章変更、画像差し替え、ドメイン設定変更などがあればご記入ください。"></textarea></div>
-
-<div class="form-consent"><label><input type="checkbox" id="privacyConsent" required><span><a href="privacy.html">プライバシーポリシー</a>を確認し、個人情報の取扱いに同意します。</span></label></div>
-
-<div class="support-submit-grid">
-<button type="submit" class="button button-blue form-submit">障害報告メールを作成</button>
-<button type="button" id="copyTroubleReport" class="button button-outline form-submit">入力内容をコピー</button>
+<div class="support-file-upload support-file-upload-danger">
+<div class="support-file-upload-heading">
+<strong>不具合画面のスクリーンショットを添付</strong>
+<span>推奨</span>
 </div>
-<p id="copyStatus" class="form-note" aria-live="polite">スクリーンショットを添付し、内容を確認してから送信してください。</p>
+<p>画像を2点まで添付できます。パスワード、秘密鍵、認証情報が写り込んでいないか確認してください。</p>
+<div class="file-input-grid">
+<label>スクリーンショット1<input accept=".jpg,.jpeg,.png,.webp" name="スクリーンショット1" type="file"/></label>
+<label>スクリーンショット2<input accept=".jpg,.jpeg,.png,.webp" name="スクリーンショット2" type="file"/></label>
+</div>
+</div>
+
+<div class="form-group"><label class="form-label" for="recentChanges">直前に行った変更<span class="optional-mark">任意</span></label><textarea class="form-control support-textarea-small" id="recentChanges" name="直前に行った変更" placeholder="文章変更、画像差し替え、ドメイン設定変更などがあればご記入ください。"></textarea></div>
+<div class="form-consent"><label><input id="privacyConsent" required="" type="checkbox"/><span><a href="privacy.html">プライバシーポリシー</a>を確認し、個人情報の取扱いに同意します。</span></label></div>
+<div class="support-submit-single">
+<button class="button button-blue form-submit" data-submit-label="障害・不具合を送信する" type="submit">障害・不具合を送信する</button>
+
+</div>
+<p class="form-note">送信後は完了画面が表示されます。緊急の場合は送信後に公式LINEでもご連絡ください。</p>
 </form>
 </section>
-
 <aside class="support-side">
 <article class="support-side-card">
 <p class="section-en">UPDATE REQUEST</p>
 <h2>通常の更新依頼ですか？</h2>
 <p>文章・写真・営業時間・料金などの変更は、更新依頼フォームからお送りください。</p>
-<a href="update-request.html" class="button button-outline">更新を依頼する</a>
+<a class="button button-outline" href="update-request.html">更新を依頼する</a>
 </article>
 <article class="support-side-card support-side-warning">
 <p class="section-en">CHECK FIRST</p>
@@ -186,53 +181,9 @@
 </main>
 <footer class="footer"><div class="footer-inner"><div><p class="footer-logo">TOTTORI NEXUS</p><p>鳥取県の店舗・企業向けホームページ制作</p><div class="footer-links">
 <a href="service.html">サービス</a><a href="works.html">制作実績</a><a href="price.html">料金</a><a href="faq.html">よくある質問</a><a href="contact.html">お問い合わせ</a><a href="update-request.html">更新依頼</a><a href="trouble-report.html">障害・不具合受付</a><a href="about.html">運営者情報</a><a href="why.html">選ばれる理由</a><a href="compare.html">料金比較</a><a href="flow.html">制作の流れ</a><a href="area.html">対応エリア</a><a href="privacy.html">プライバシーポリシー</a>
-</div><a href="https://www.instagram.com/tottori.nexus/" target="_blank" rel="noopener noreferrer" class="footer-instagram">Instagram：@tottori.nexus</a><a href="line://ti/p/@722ogapk" target="_blank" rel="noopener noreferrer" class="footer-line">公式LINE：友だち追加</a></div><p>© 2026 TOTTORI NEXUS</p></div></footer>
+</div><a class="footer-instagram" href="https://www.instagram.com/tottori.nexus/" rel="noopener noreferrer" target="_blank">Instagram：@tottori.nexus</a><a class="footer-line" href="line://ti/p/@722ogapk" rel="noopener noreferrer" target="_blank">公式LINE：友だち追加</a></div><p>© 2026 TOTTORI NEXUS</p></div></footer>
 <script src="script.js"></script>
-<script>
-const troubleForm=document.getElementById("troubleReportForm");
-const copyTroubleButton=document.getElementById("copyTroubleReport");
-const troubleCopyStatus=document.getElementById("copyStatus");
-function buildTroubleMail(){
-const data=new FormData(troubleForm);
-const value=(name)=>String(data.get(name)||"").trim();
-const body=[
-"鳥取ネクサス ご担当者様","","ホームページの障害・不具合を報告します。","",
-"【お名前】",value("customerName"),"",
-"【店舗名・会社名】",value("businessName"),"",
-"【メールアドレス】",value("email"),"",
-"【電話番号】",value("phone")||"未入力","",
-"【対象サイトURL】",value("siteUrl"),"",
-"【不具合の種類】",value("troubleType"),"",
-"【影響度】",value("severity"),"",
-"【発生日時】",value("occurredAt")||"不明","",
-"【発生頻度】",value("frequency"),"",
-"【使用端末】",value("device"),"",
-"【使用ブラウザ】",value("browser"),"",
-"【問題が起きているページ】",value("affectedPage"),"",
-"【症状・表示内容】",value("symptom"),"",
-"【発生までの操作手順】",value("steps")||"未入力","",
-"【エラーメッセージ】",value("errorMessage")||"未入力","",
-"【直前に行った変更】",value("recentChanges")||"未入力","",
-"※不具合画面のスクリーンショットを、このメールに添付します。",
-"※パスワード、秘密鍵、認証情報は記載していません。"
-].join("\n");
-return {subject:`【障害受付】${value("businessName")}／${value("troubleType")}`,body};
-}
-troubleForm.addEventListener("submit",(event)=>{
-event.preventDefault();
-if(!troubleForm.reportValidity())return;
-const mail=buildTroubleMail();
-window.location.href=`mailto:info.tottorinexus@gmail.com?subject=${encodeURIComponent(mail.subject)}&body=${encodeURIComponent(mail.body)}`;
-});
-copyTroubleButton.addEventListener("click",async()=>{
-if(!troubleForm.reportValidity())return;
-const mail=buildTroubleMail();
-const text=`件名：${mail.subject}\n\n${mail.body}`;
-try{await navigator.clipboard.writeText(text);}
-catch(error){const area=document.createElement("textarea");area.value=text;document.body.appendChild(area);area.select();document.execCommand("copy");area.remove();}
-troubleCopyStatus.textContent="入力内容をコピーしました。";
-});
-</script>
-<a href="line://ti/p/@722ogapk" target="_blank" rel="noopener noreferrer" class="floating-line" aria-label="鳥取ネクサス公式LINEを友だち追加"><span class="floating-line-icon" aria-hidden="true">LINE</span><span class="floating-line-text">LINEで相談</span></a>
+
+<a aria-label="鳥取ネクサス公式LINEを友だち追加" class="floating-line" href="line://ti/p/@722ogapk" rel="noopener noreferrer" target="_blank"><span aria-hidden="true" class="floating-line-icon">LINE</span><span class="floating-line-text">LINEで相談</span></a>
 </body>
 </html>
