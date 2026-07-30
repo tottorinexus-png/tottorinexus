@@ -5038,3 +5038,148 @@ button.form-submit:disabled {
         gap: 4px;
     }
 }
+
+
+/* Instagram and X cards on links page */
+.links-social-section {
+    margin-top: 24px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(7, 87, 166, .13);
+}
+
+.links-social-heading {
+    text-align: left;
+}
+
+.links-social-heading p {
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .18em;
+}
+
+.links-social-heading h2 {
+    margin-top: 4px;
+    color: var(--primary-dark);
+    font-size: 24px;
+}
+
+.links-social-heading span {
+    margin-top: 7px;
+    display: block;
+    color: var(--subtext);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.links-social-grid {
+    margin-top: 17px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.links-social-card {
+    min-width: 0;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: 47px minmax(0, 1fr) auto;
+    gap: 13px;
+    align-items: center;
+    color: #fff;
+    border-radius: 16px;
+    text-decoration: none;
+    box-shadow: 0 12px 28px rgba(16, 24, 40, .12);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.links-social-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 17px 35px rgba(16, 24, 40, .17);
+}
+
+.links-social-instagram {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d 58%, #fcb045);
+}
+
+.links-social-x {
+    background: linear-gradient(145deg, #111, #2b2b2b);
+}
+
+.links-social-icon {
+    width: 47px;
+    height: 47px;
+    display: grid;
+    place-items: center;
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.22);
+    border-radius: 13px;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.links-social-copy {
+    min-width: 0;
+    display: grid;
+}
+
+.links-social-copy small {
+    color: rgba(255,255,255,.7);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .13em;
+}
+
+.links-social-copy strong {
+    margin-top: 3px;
+    overflow: hidden;
+    color: #fff;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.links-social-copy em {
+    margin-top: 5px;
+    color: rgba(255,255,255,.74);
+    font-size: 10px;
+    font-style: normal;
+}
+
+.links-social-card b {
+    color: #fff;
+    font-size: 18px;
+}
+
+.links-email {
+    margin-top: 13px;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    color: var(--subtext);
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.links-email span {
+    color: var(--primary);
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: .12em;
+}
+
+.links-email:hover {
+    color: var(--primary);
+    border-color: rgba(7,87,166,.3);
+}
+
+@media (max-width: 630px) {
+    .links-social-grid {
+        grid-template-columns: 1fr;
+    }
+}
